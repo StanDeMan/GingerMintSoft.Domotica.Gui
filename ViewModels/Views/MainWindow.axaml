@@ -8,7 +8,8 @@
         Icon="/Assets/avalonia-logo.ico"
         Title="GingerMintSoft.Domotica.Gui"
 		Topmost="True" 
-		WindowState="Maximized">
+		WindowState="Maximized"
+        ShowInTaskbar="True">
 
     <Design.DataContext>
         <vm:MainWindowViewModel/>
