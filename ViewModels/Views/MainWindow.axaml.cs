@@ -8,6 +8,8 @@ namespace GingerMintSoft.Domotica.Gui.Views
     {
         public MainWindow()
         {
+            //WindowState = WindowState.FullScreen;
+
             InitializeComponent();
 #if DEBUG
             this.AttachDevTools();
