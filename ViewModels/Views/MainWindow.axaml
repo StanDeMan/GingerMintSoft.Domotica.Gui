@@ -17,6 +17,6 @@
 
     <StackPanel Orientation="Vertical" VerticalAlignment="Center" HorizontalAlignment="Center">
         <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-		<Button HorizontalAlignment="Center" Content="Full Screen"/>
+		<Button HorizontalAlignment="Center" Content="Full Screen" Click="FullScreenClick"/>
 	</StackPanel>
 </Window>
