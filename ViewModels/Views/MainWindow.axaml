@@ -6,7 +6,9 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         x:Class="GingerMintSoft.Domotica.Gui.Views.MainWindow"
         Icon="/Assets/avalonia-logo.ico"
-        Title="GingerMintSoft.Domotica.Gui">
+        Title="GingerMintSoft.Domotica.Gui"
+		Topmost="True" 
+		WindowState="Maximized">
 
     <Design.DataContext>
         <vm:MainWindowViewModel/>
