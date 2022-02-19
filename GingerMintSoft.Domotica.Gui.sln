@@ -7,6 +7,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "GingerMintSoft.Domotica.Gui
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "AvaloniaSpacedGrid", "..\AvaloniaSpacedGrid\AvaloniaSpacedGrid.csproj", "{18CA3D0C-9E7C-4C06-A480-4F226446FB82}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Citrus.Avalonia", "..\Citrus.Avalonia\Citrus.Avalonia.csproj", "{B0044ED6-B952-4C41-A83A-EC00E147B7F6}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{18CA3D0C-9E7C-4C06-A480-4F226446FB82}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{18CA3D0C-9E7C-4C06-A480-4F226446FB82}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{18CA3D0C-9E7C-4C06-A480-4F226446FB82}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B0044ED6-B952-4C41-A83A-EC00E147B7F6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0044ED6-B952-4C41-A83A-EC00E147B7F6}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0044ED6-B952-4C41-A83A-EC00E147B7F6}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0044ED6-B952-4C41-A83A-EC00E147B7F6}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

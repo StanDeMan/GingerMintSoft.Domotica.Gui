@@ -26,5 +26,6 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\AvaloniaSpacedGrid\AvaloniaSpacedGrid.csproj" />
+    <ProjectReference Include="..\Citrus.Avalonia\Citrus.Avalonia.csproj" />
   </ItemGroup>
 </Project>
