@@ -6,7 +6,7 @@
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
 		xmlns:sg="clr-namespace:AvaloniaSpacedGrid;assembly=AvaloniaSpacedGrid"
         x:Class="GingerMintSoft.Domotica.Gui.Views.MainWindow"
-        Icon="/Assets/avalonia-logo.ico"
+        Icon="/Assets/domotica-iot.ico"
         Title="GingerMintSoft.Domotica.Gui"
 		Topmost="True" 
 		WindowState="Maximized"
