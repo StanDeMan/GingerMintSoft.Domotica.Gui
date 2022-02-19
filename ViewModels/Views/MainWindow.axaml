@@ -13,10 +13,6 @@
 		WindowStartupLocation="CenterScreen"
         ShowInTaskbar="True">
 
-    <Design.DataContext>
-        <vm:MainWindowViewModel/>
-    </Design.DataContext>
-
 	<Grid RowDefinitions="*, 80">
 		<sg:SpacedGrid Name="SpacedGrid" RowSpacing="0" ColumnSpacing="0">
 			<sg:SpacedGrid.RowDefinitions>
@@ -46,9 +42,9 @@
 			<Button Grid.Row="2" Grid.Column="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" />
 		</sg:SpacedGrid>
 		
-		<StackPanel Orientation="Vertical" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center">
-			<TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Bottom"/>
-			<Button HorizontalAlignment="Center" Content="Full Screen" Click="FullScreenClick"/>
+		<StackPanel Orientation="Horizontal" Grid.Row="1">
+			<Button Content="Full Screen" Click="FullScreenClick"/>
+			<Button Content="Change Theme" Command="{Binding ChangeTheme}"/>
 		</StackPanel>
 	</Grid>
 </Window>
