@@ -15,9 +15,21 @@ namespace GingerMintSoft.Domotica.Gui
 
         // Avalonia configuration, don't remove; also used by visual designer.
         public static AppBuilder BuildAvaloniaApp()
-            => AppBuilder.Configure<App>()
-                .UseReactiveUI()
-                .UsePlatformDetect()
-                .LogToTrace();
+            => AppBuilder
+            .Configure<App>()
+            .UsePlatformDetect()
+            .With(new X11PlatformOptions 
+            {
+                EnableMultiTouch = true, 
+                UseDBusMenu = true
+            })
+            .With(new Win32PlatformOptions 
+            {
+                EnableMultitouch = true, 
+                AllowEglInitialization = true
+            })
+            .UseSkia()
+            .UseReactiveUI()
+            .LogToTrace();
     }
 }
