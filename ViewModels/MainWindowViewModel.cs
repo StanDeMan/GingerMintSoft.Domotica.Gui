@@ -1,9 +1,7 @@
+using ReactiveUI;
+using ReactiveUI.Validation.Helpers;
 using System;
 using System.Reactive;
-using ReactiveUI;
-using ReactiveUI.Fody.Helpers;
-using ReactiveUI.Validation.Extensions;
-using ReactiveUI.Validation.Helpers;
 
 namespace GingerMintSoft.Domotica.Gui.ViewModels
 {
@@ -22,8 +20,7 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
             }));
         }
 
-        public string Greeting => "Welcome to Domotica.Gui!";
-
         public ReactiveCommand<Unit, Unit> ChangeTheme { get; }
+        public string Greeting => "Welcome to Domotica.Gui!";
     }
 }
