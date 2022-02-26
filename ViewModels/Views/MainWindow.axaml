@@ -25,7 +25,6 @@
 				<RowDefinition />
 				<RowDefinition />
 			</sg:SpacedGrid.RowDefinitions>
-
 			<sg:SpacedGrid.ColumnDefinitions>
 				<ColumnDefinition />
 				<ColumnDefinition />
@@ -35,13 +34,13 @@
 			</sg:SpacedGrid.ColumnDefinitions>
 
 			<Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Classes="Primary" Margin="0 0" Background="LightGray"/>
-
 			<Button Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Classes="Primary" Margin="0 0" Background="LightGray"/>
 			<Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Classes="Primary" Margin="0 0" Background="LightGray"/>
 
 			<Button Grid.Row="0" Grid.Column="3" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Classes="Primary" Margin="0 0" Background="LightGray"/>
 			<Button Grid.Row="1" Grid.Column="3" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Classes="Primary" Margin="0 0" Background="LightGray"/>
 			<Button Grid.Row="2" Grid.Column="3" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Classes="Primary" Margin="0 0" Background="LightGray"/>
+			
 			<Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Classes="Primary" Margin="0 0" Background="LightGray"/>
 		</sg:SpacedGrid>
 		
