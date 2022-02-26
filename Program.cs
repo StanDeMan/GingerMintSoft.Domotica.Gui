@@ -7,7 +7,7 @@ namespace GingerMintSoft.Domotica.Gui
     internal class Program
     {
         // Initialization code. Don't use any Avalonia, third-party APIs or any
-        // SynchronizationContext-reliant code before AppMain is called: things 
+        // SynchronizationContext-reliant code before AppMain is called: things
         // aren't initialized yet and stuff might break.
         [STAThread]
         public static void Main(string[] args) => BuildAvaloniaApp()
@@ -18,14 +18,14 @@ namespace GingerMintSoft.Domotica.Gui
             => AppBuilder
             .Configure<App>()
             .UsePlatformDetect()
-            .With(new X11PlatformOptions 
+            .With(new X11PlatformOptions
             {
-                EnableMultiTouch = true, 
+                EnableMultiTouch = true,
                 UseDBusMenu = true
             })
-            .With(new Win32PlatformOptions 
+            .With(new Win32PlatformOptions
             {
-                EnableMultitouch = true, 
+                EnableMultitouch = true,
                 AllowEglInitialization = true
             })
             .UseSkia()
