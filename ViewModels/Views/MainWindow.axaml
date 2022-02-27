@@ -20,8 +20,8 @@
 		<pages:DashBoard Grid.Row="1">
         </pages:DashBoard>
 		<StackPanel Orientation="Horizontal" Grid.Row="2">
-			<Button Content="Full Screen" Click="FullScreenClick" />
-			<Button Content="Change Theme" Command="{Binding ChangeTheme}" />
+			<!--<Button Content="Full Screen" Click="FullScreenClick" />
+			<Button Content="Change Theme" Command="{Binding ChangeTheme}" />-->
 		</StackPanel>
 	</Grid>
 </Window>
