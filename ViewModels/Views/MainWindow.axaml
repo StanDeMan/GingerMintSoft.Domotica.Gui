@@ -15,7 +15,7 @@
 		WindowStartupLocation="CenterScreen"
         ShowInTaskbar="True">
 
-	<Grid RowDefinitions="60, 6*, 80">
+	<Grid RowDefinitions="60, 6*, 120">
 		<StackPanel Orientation="Horizontal" Grid.Row="0">
 		</StackPanel>
 		<sg:SpacedGrid Name="SpacedGrid" RowSpacing="1" ColumnSpacing="1" Grid.Row="1">
