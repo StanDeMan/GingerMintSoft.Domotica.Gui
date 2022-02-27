@@ -1,16 +1,15 @@
 <Window xmlns="https://github.com/avaloniaui"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:vm="using:GingerMintSoft.Domotica.Gui.ViewModels"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-		xmlns:sg="clr-namespace:AvaloniaSpacedGrid;assembly=AvaloniaSpacedGrid"
-        x:Class="GingerMintSoft.Domotica.Gui.Views.MainWindow"
+        xmlns:pages="clr-namespace:GingerMintSoft.Domotica.Gui.UserControls.Pages"
+		x:Class="GingerMintSoft.Domotica.Gui.Views.MainWindow"
         Icon="/Assets/domotica-iot.ico"
         Title="GingerMintSoft.Domotica.Gui"
-		Topmost="True" 
+		Topmost="True"
 		MinWidth="1024"
-		MinHeight="600" 
+		MinHeight="600"
 		WindowState="Maximized"
 		WindowStartupLocation="CenterScreen"
         ShowInTaskbar="True">
@@ -18,27 +17,11 @@
 	<Grid RowDefinitions="60, 6*, 120">
 		<StackPanel Orientation="Horizontal" Grid.Row="0">
 		</StackPanel>
-		<sg:SpacedGrid Name="SpacedGrid" RowSpacing="1" ColumnSpacing="1" Grid.Row="1">
-			<sg:SpacedGrid.RowDefinitions>
-				<RowDefinition />
-				<RowDefinition />
-				<RowDefinition />
-				<RowDefinition />
-			</sg:SpacedGrid.RowDefinitions>
-			<sg:SpacedGrid.ColumnDefinitions>
-				<ColumnDefinition />
-				<ColumnDefinition />
-				<ColumnDefinition />
-				<ColumnDefinition />
-				<ColumnDefinition />
-			</sg:SpacedGrid.ColumnDefinitions>
-			<Button Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Classes="Primary" Margin="0 0" Background="LightGray"/>
-			<Button Grid.Row="0" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Classes="Primary" Margin="0 0" Background="LightGray"/>	
-			<Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Classes="Primary" Margin="0 0" Background="LightGray"/>
-		</sg:SpacedGrid>		
+		<pages:DashBoard Grid.Row="1">
+        </pages:DashBoard>
 		<StackPanel Orientation="Horizontal" Grid.Row="2">
-			<Button Content="Full Screen" Click="FullScreenClick"/>
-			<Button Content="Change Theme" Command="{Binding ChangeTheme}"/>
+			<Button Content="Full Screen" Click="FullScreenClick" />
+			<Button Content="Change Theme" Command="{Binding ChangeTheme}" />
 		</StackPanel>
 	</Grid>
 </Window>
