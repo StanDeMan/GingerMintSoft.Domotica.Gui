@@ -1,12 +1,25 @@
 using ReactiveUI;
-using ReactiveUI.Validation.Helpers;
 using System;
 using System.Reactive;
+using System.Reactive.Linq;
+using Splat;
 
 namespace GingerMintSoft.Domotica.Gui.ViewModels
 {
-    public sealed class MainWindowViewModel : ReactiveValidationObject
+    using Views;
+
+    public sealed class MainWindowViewModel : ReactiveObject, IScreen
     {
+        public ReactiveCommand<Unit, Unit> ChangeTheme { get; }
+        public string Greeting => "Welcome to Domotica.Gui!";
+        public RoutingState Router { get; } = new RoutingState();
+
+        // The command that navigates a user to first view model.
+        public ReactiveCommand<Unit, IRoutableViewModel> GoDashBoard { get; }
+
+        // The command that navigates a user back.
+        public ReactiveCommand<Unit, IRoutableViewModel> GoBack { get; }
+
         public MainWindowViewModel(StyleManager styles)
         {
             ChangeTheme = ReactiveCommand.Create(() => styles.UseTheme(styles.CurrentTheme switch
@@ -18,9 +31,15 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
                 StyleManager.Theme.Magma => StyleManager.Theme.Citrus,
                 _ => throw new ArgumentOutOfRangeException(nameof(styles.CurrentTheme))
             }));
-        }
 
-        public ReactiveCommand<Unit, Unit> ChangeTheme { get; }
-        public string Greeting => "Welcome to Domotica.Gui!";
+            Locator.CurrentMutable.Register(() => new DashBoard(), typeof(IViewFor<DashBoardViewModel>));
+            Locator.CurrentMutable.Register(() => new Appliances(), typeof(IViewFor<AppliancesViewModel>));
+
+            GoDashBoard = ReactiveCommand.CreateFromObservable(
+                () => Router.Navigate.Execute(new DashBoardViewModel(this)));
+
+            GoBack = ReactiveCommand.CreateFromObservable(
+                () => Router.Navigate.Execute(new AppliancesViewModel(this)));
+        }
     }
 }

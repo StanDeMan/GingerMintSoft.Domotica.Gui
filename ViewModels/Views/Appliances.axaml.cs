@@ -4,9 +4,10 @@ using Avalonia.ReactiveUI;
 
 namespace GingerMintSoft.Domotica.Gui.ViewModels.Views
 {
-    public class DashBoard : ReactiveUserControl<DashBoardViewModel>
+    public class Appliances : ReactiveUserControl<AppliancesViewModel>
+
     {
-        public DashBoard()
+        public Appliances()
         {
             InitializeComponent();
         }

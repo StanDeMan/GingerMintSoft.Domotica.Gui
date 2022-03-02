@@ -1,4 +1,5 @@
 <Window xmlns="https://github.com/avaloniaui"
+        xmlns:rxui="clr-namespace:Avalonia.ReactiveUI;assembly=Avalonia.ReactiveUI"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
@@ -17,11 +18,17 @@
 	<Grid RowDefinitions="60, 6*, 120">
 		<StackPanel Orientation="Horizontal" Grid.Row="0">
 		</StackPanel>
-		<pages:DashBoard Grid.Row="1">
-        </pages:DashBoard>
-		<StackPanel Orientation="Horizontal" Grid.Row="2">
+        <rxui:RoutedViewHost Grid.Row="1" Router="{Binding Router}">
+            <rxui:RoutedViewHost.DefaultContent>
+                <pages:DashBoard>
+                </pages:DashBoard>
+            </rxui:RoutedViewHost.DefaultContent>
+        </rxui:RoutedViewHost>
+        <StackPanel Orientation="Horizontal" Grid.Row="2">
 			<!--<Button Content="Full Screen" Click="FullScreenClick" />
 			<Button Content="Change Theme" Command="{Binding ChangeTheme}" />-->
+            <Button Content="Dashboard" Command="{Binding GoDashBoard}" />
+            <Button Content="Go back" Command="{Binding GoBack}" />
 		</StackPanel>
 	</Grid>
 </Window>

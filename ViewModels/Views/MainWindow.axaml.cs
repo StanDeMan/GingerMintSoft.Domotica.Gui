@@ -2,10 +2,11 @@ using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
+using Avalonia.ReactiveUI;
 
 namespace GingerMintSoft.Domotica.Gui.ViewModels.Views
 {
-    public partial class MainWindow : Window
+    public class MainWindow : ReactiveWindow<MainWindowViewModel>
     {
         private bool _fullScreen;
         public MainWindow()
