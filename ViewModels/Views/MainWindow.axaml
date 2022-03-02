@@ -27,8 +27,8 @@
         <StackPanel Orientation="Horizontal" Grid.Row="2">
 			<!--<Button Content="Full Screen" Click="FullScreenClick" />
 			<Button Content="Change Theme" Command="{Binding ChangeTheme}" />-->
-            <Button Content="Dashboard" Command="{Binding GoDashBoard}" />
-            <Button Content="Go back" Command="{Binding GoBack}" />
+            <ToggleButton Content="Dashboard" Command="{Binding GoDashBoard}" />
+            <ToggleButton Content="Appliances" Command="{Binding GoAppliances}" />
 		</StackPanel>
 	</Grid>
 </Window>

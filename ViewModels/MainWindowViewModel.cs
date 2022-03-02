@@ -18,7 +18,7 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
         public ReactiveCommand<Unit, IRoutableViewModel> GoDashBoard { get; }
 
         // The command that navigates a user back.
-        public ReactiveCommand<Unit, IRoutableViewModel> GoBack { get; }
+        public ReactiveCommand<Unit, IRoutableViewModel> GoAppliances { get; }
 
         public MainWindowViewModel(StyleManager styles)
         {
@@ -38,7 +38,7 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
             GoDashBoard = ReactiveCommand.CreateFromObservable(
                 () => Router.Navigate.Execute(new DashBoardViewModel(this)));
 
-            GoBack = ReactiveCommand.CreateFromObservable(
+            GoAppliances = ReactiveCommand.CreateFromObservable(
                 () => Router.Navigate.Execute(new AppliancesViewModel(this)));
         }
     }
