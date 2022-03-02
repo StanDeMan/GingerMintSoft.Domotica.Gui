@@ -2,7 +2,7 @@ using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
 using GingerMintSoft.Domotica.Gui.ViewModels;
-using GingerMintSoft.Domotica.Gui.Views;
+using GingerMintSoft.Domotica.Gui.ViewModels.Views;
 
 namespace GingerMintSoft.Domotica.Gui
 {

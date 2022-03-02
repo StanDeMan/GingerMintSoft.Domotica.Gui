@@ -4,7 +4,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
         xmlns:pages1="clr-namespace:GingerMintSoft.Domotica.Gui.UserInterface.Pages"
-        x:Class="GingerMintSoft.Domotica.Gui.Views.MainWindow"
+        x:Class="GingerMintSoft.Domotica.Gui.ViewModels.Views.MainWindow"
         Icon="/Assets/domotica-iot.ico"
         Title="GingerMintSoft.Domotica.Gui"
 		Topmost="True"
