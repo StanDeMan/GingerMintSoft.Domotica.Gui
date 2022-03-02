@@ -1,12 +1,11 @@
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace GingerMintSoft.Domotica.Gui.UserControls
+namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls
 {
-    public partial class NavigationPanel : UserControl
+    public partial class PersonPanel : UserControl
     {
-        public NavigationPanel()
+        public PersonPanel()
         {
             InitializeComponent();
         }

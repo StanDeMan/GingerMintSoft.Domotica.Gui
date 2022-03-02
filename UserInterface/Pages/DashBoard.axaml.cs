@@ -1,12 +1,12 @@
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace GingerMintSoft.Domotica.Gui.UserControls
+
+namespace GingerMintSoft.Domotica.Gui.UserInterface.Pages
 {
-    public partial class HeaderPanel : UserControl
+    public partial class DashBoard : UserControl
     {
-        public HeaderPanel()
+        public DashBoard()
         {
             InitializeComponent();
         }
