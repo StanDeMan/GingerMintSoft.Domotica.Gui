@@ -3,7 +3,7 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        xmlns:pages1="clr-namespace:GingerMintSoft.Domotica.Gui.UserInterface.Pages"
+        xmlns:pages="clr-namespace:GingerMintSoft.Domotica.Gui.ViewModels.Views"
         x:Class="GingerMintSoft.Domotica.Gui.ViewModels.Views.MainWindow"
         Icon="/Assets/domotica-iot.ico"
         Title="GingerMintSoft.Domotica.Gui"
@@ -17,8 +17,8 @@
 	<Grid RowDefinitions="60, 6*, 120">
 		<StackPanel Orientation="Horizontal" Grid.Row="0">
 		</StackPanel>
-		<pages1:DashBoard Grid.Row="1">
-        </pages1:DashBoard>
+		<pages:DashBoard Grid.Row="1">
+        </pages:DashBoard>
 		<StackPanel Orientation="Horizontal" Grid.Row="2">
 			<!--<Button Content="Full Screen" Click="FullScreenClick" />
 			<Button Content="Change Theme" Command="{Binding ChangeTheme}" />-->
