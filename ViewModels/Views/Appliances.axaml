@@ -2,10 +2,28 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-             Name="Appliances"
+             xmlns:sg="clr-namespace:AvaloniaSpacedGrid;assembly=AvaloniaSpacedGrid"
+             Name="DashBoard"
              mc:Ignorable="d" 
              d:DesignWidth="800" 
              d:DesignHeight="450"
              x:Class="GingerMintSoft.Domotica.Gui.ViewModels.Views.Appliances">
-  Appliances!
+    <sg:SpacedGrid Name="SpacedGrid" RowSpacing="1" ColumnSpacing="1" >
+        <sg:SpacedGrid.RowDefinitions>
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+            <RowDefinition />
+        </sg:SpacedGrid.RowDefinitions>
+        <sg:SpacedGrid.ColumnDefinitions>
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+            <ColumnDefinition />
+        </sg:SpacedGrid.ColumnDefinitions>
+        <Button Grid.Row="0" Grid.Column="0" Grid.RowSpan="4" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0 0" Background="LightGray"/>
+        <Button Grid.Row="0" Grid.Column="2" Grid.RowSpan="4" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0 0" Background="LightGray"/>	
+    </sg:SpacedGrid>		
 </UserControl>
