@@ -15,7 +15,7 @@
 		WindowState="Maximized"
 		WindowStartupLocation="CenterScreen"
         ShowInTaskbar="True">
-    <Grid RowDefinitions="60, 6*, 120">
+    <Grid RowDefinitions=".45*, 6*, 120">
 		<StackPanel Grid.Row="0">
             <controls:HeaderPanel>
             </controls:HeaderPanel>
