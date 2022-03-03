@@ -4,7 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
-        xmlns:pages="clr-namespace:GingerMintSoft.Domotica.Gui.ViewModels.Views"
+        xmlns:views="clr-namespace:GingerMintSoft.Domotica.Gui.ViewModels.Views"
+        xmlns:controls="clr-namespace:GingerMintSoft.Domotica.Gui.UserInterface.Controls"
         x:Class="GingerMintSoft.Domotica.Gui.ViewModels.Views.MainWindow"
         Icon="/Assets/domotica-iot.ico"
         Title="GingerMintSoft.Domotica.Gui"
@@ -14,14 +15,15 @@
 		WindowState="Maximized"
 		WindowStartupLocation="CenterScreen"
         ShowInTaskbar="True">
-
-	<Grid RowDefinitions="60, 6*, 120">
-		<StackPanel Orientation="Horizontal" Grid.Row="0">
-		</StackPanel>
+    <Grid RowDefinitions="60, 6*, 120">
+		<StackPanel Grid.Row="0">
+            <controls:HeaderPanel>
+            </controls:HeaderPanel>
+        </StackPanel>
         <rxui:RoutedViewHost Grid.Row="1" Router="{Binding Router}">
             <rxui:RoutedViewHost.DefaultContent>
-                <pages:DashBoard>
-                </pages:DashBoard>
+                <views:DashBoard>
+                </views:DashBoard>
             </rxui:RoutedViewHost.DefaultContent>
         </rxui:RoutedViewHost>
         <StackPanel Orientation="Horizontal" Grid.Row="2">

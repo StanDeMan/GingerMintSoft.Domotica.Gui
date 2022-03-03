@@ -3,6 +3,7 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
 			 xmlns:sg="clr-namespace:AvaloniaSpacedGrid;assembly=AvaloniaSpacedGrid"
+			 xmlns:controls="clr-namespace:GingerMintSoft.Domotica.Gui.UserInterface.Controls"
 			 Name="DashBoard"
              mc:Ignorable="d" 
 			 d:DesignWidth="800" 
@@ -24,6 +25,6 @@
 		</sg:SpacedGrid.ColumnDefinitions>
 		<Button Grid.Row="0" Grid.Column="0" Grid.RowSpan="3" Grid.ColumnSpan="3" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0 0" Background="LightGray"/>
 		<Button Grid.Row="0" Grid.Column="3" Grid.RowSpan="3" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0 0" Background="LightGray"/>	
-		<Button Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0 0" Background="LightGray"/>
+		<controls:PersonPanel Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="5" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0 0" Background="White"/>
 	</sg:SpacedGrid>		
 </UserControl>
