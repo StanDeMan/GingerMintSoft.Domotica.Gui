@@ -15,9 +15,9 @@
 		WindowState="Maximized"
 		WindowStartupLocation="CenterScreen"
         ShowInTaskbar="True">
-    <Grid RowDefinitions=".45*, 6*, 120">
-		<StackPanel Grid.Row="0">
-            <controls:HeaderPanel>
+    <Grid RowDefinitions="50, 6*, 120">
+        <StackPanel Grid.Row="0">
+            <controls:HeaderPanel Height="50">
             </controls:HeaderPanel>
         </StackPanel>
         <rxui:RoutedViewHost Grid.Row="1" Router="{Binding Router}">

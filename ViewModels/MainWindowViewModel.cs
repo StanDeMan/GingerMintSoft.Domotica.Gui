@@ -1,8 +1,7 @@
+using Splat;
 using ReactiveUI;
 using System;
 using System.Reactive;
-using System.Reactive.Linq;
-using Splat;
 
 namespace GingerMintSoft.Domotica.Gui.ViewModels
 {
@@ -35,11 +34,11 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
             Locator.CurrentMutable.Register(() => new DashBoard(), typeof(IViewFor<DashBoardViewModel>));
             Locator.CurrentMutable.Register(() => new Appliances(), typeof(IViewFor<AppliancesViewModel>));
 
-            GoDashBoard = ReactiveCommand.CreateFromObservable(
-                () => Router.Navigate.Execute(new DashBoardViewModel(this)));
+            GoDashBoard = ReactiveCommand.CreateFromObservable(() => 
+                Router.Navigate.Execute(new DashBoardViewModel(this)));
 
-            GoAppliances = ReactiveCommand.CreateFromObservable(
-                () => Router.Navigate.Execute(new AppliancesViewModel(this)));
+            GoAppliances = ReactiveCommand.CreateFromObservable(() => 
+                Router.Navigate.Execute(new AppliancesViewModel(this)));
         }
     }
 }
