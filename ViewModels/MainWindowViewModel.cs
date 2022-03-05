@@ -2,6 +2,7 @@ using Splat;
 using ReactiveUI;
 using System;
 using System.Reactive;
+using GingerMintSoft.Domotica.Gui.Style;
 
 namespace GingerMintSoft.Domotica.Gui.ViewModels
 {

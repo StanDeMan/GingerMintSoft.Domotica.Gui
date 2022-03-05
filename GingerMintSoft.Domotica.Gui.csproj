@@ -11,7 +11,6 @@
     <AvaloniaResource Remove="Assets\domotica-iot_32.png" />
     <AvaloniaResource Remove="Assets\domotica-iot_48.png" />
     <AvaloniaResource Remove="Assets\domotica-iot_64.png" />
-    <Folder Include="Routing\" />
     <None Remove=".gitignore" />
     <None Remove="Assets\domotica-iot_16.png" />
     <None Remove="Assets\domotica-iot_32.png" />

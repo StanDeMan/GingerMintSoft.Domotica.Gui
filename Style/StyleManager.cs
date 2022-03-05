@@ -2,7 +2,7 @@
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml.Styling;
 
-namespace GingerMintSoft.Domotica.Gui
+namespace GingerMintSoft.Domotica.Gui.Style
 {
     public sealed class StyleManager
     {
@@ -67,8 +67,7 @@ namespace GingerMintSoft.Domotica.Gui
 
         private static StyleInclude CreateStyle(string url)
         {
-            var self = new Uri("resm:Styles?assembly=Citrus.Avalonia.Sandbox");
-            return new StyleInclude(self)
+            return new StyleInclude(new Uri("resm:Styles?assembly=Citrus.Avalonia.Sandbox"))
             {
                 Source = new Uri(url)
             };

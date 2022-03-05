@@ -1,9 +1,10 @@
 <Application xmlns="https://github.com/avaloniaui"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
              xmlns:local="using:GingerMintSoft.Domotica.Gui"
+             xmlns:routing="clr-namespace:GingerMintSoft.Domotica.Gui.Routing"
              x:Class="GingerMintSoft.Domotica.Gui.App">
     <Application.DataTemplates>
-        <local:ViewLocator/>
+        <routing:ViewLocator/>
     </Application.DataTemplates>
 
     <Application.Styles>

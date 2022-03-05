@@ -1,9 +1,9 @@
+using System;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
 using GingerMintSoft.Domotica.Gui.ViewModels;
-using System;
 
-namespace GingerMintSoft.Domotica.Gui
+namespace GingerMintSoft.Domotica.Gui.Routing
 {
     public class ViewLocator : IDataTemplate
     {
