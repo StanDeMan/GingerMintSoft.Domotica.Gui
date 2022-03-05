@@ -1,6 +1,6 @@
 using Avalonia;
-using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
+using Avalonia.Controls.ApplicationLifetimes;
 using GingerMintSoft.Domotica.Gui.Style;
 using GingerMintSoft.Domotica.Gui.ViewModels;
 using GingerMintSoft.Domotica.Gui.ViewModels.Views;
