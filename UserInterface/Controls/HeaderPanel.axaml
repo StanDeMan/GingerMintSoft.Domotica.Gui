@@ -10,6 +10,7 @@
              x:Class="GingerMintSoft.Domotica.Gui.UserInterface.Controls.HeaderPanel">
     <sg:SpacedGrid 
         Name="SpacedGrid"
+		Background="#333333"
         RowSpacing="1" 
         ColumnSpacing="1">
         <sg:SpacedGrid.RowDefinitions>
@@ -23,7 +24,25 @@
             <ColumnDefinition />
             <ColumnDefinition />
         </sg:SpacedGrid.ColumnDefinitions>
-        <Button Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0 0" Background="LightGray"/>
-        <Button Grid.Row="0" Grid.Column="2" Grid.ColumnSpan="4" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0 0" Background="LightGray"/>	
+		<Border 
+			Background="#333333"
+			Grid.Row="0" 
+			Grid.Column="0" 
+			Grid.ColumnSpan="2" 
+			HorizontalAlignment="Stretch" 
+			VerticalAlignment="Stretch">
+            <StackPanel>              
+            </StackPanel>
+        </Border>
+		<Border 
+			Background="#494949"
+			Grid.Row="0" 
+			Grid.Column="2" 
+			Grid.ColumnSpan="4" 
+			HorizontalAlignment="Stretch" 
+			VerticalAlignment="Stretch">
+            <StackPanel>              
+            </StackPanel>
+        </Border>
     </sg:SpacedGrid>
 </UserControl>
