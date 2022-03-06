@@ -5,7 +5,7 @@
              xmlns:sg="clr-namespace:AvaloniaSpacedGrid;assembly=AvaloniaSpacedGrid"
              Name="HeaderPanel"
              mc:Ignorable="d" 
-             d:DesignWidth="1000" 
+             d:DesignWidth="1200" 
              d:DesignHeight="50"
              x:Class="GingerMintSoft.Domotica.Gui.UserInterface.Controls.HeaderPanel">
     <sg:SpacedGrid 
@@ -42,7 +42,7 @@
 						FontSize="20" 
 						TextWrapping="Wrap" 
 						VerticalAlignment="Top" 
-						Margin="34,12,0,0"
+						Margin="50,12,0,0"
 						Text="12:44h   24 May 2022"> <!-- operate with <Run> later and put a binding here! -->
 					</TextBlock>
 				</StackPanel>
@@ -55,7 +55,7 @@
 			Grid.ColumnSpan="2" 
 			HorizontalAlignment="Stretch" 
 			VerticalAlignment="Stretch">
- 			<Image Source="/Assets/microphone.png" Height="22" Width="22" Margin="0,0,60,0" HorizontalAlignment="Right"/>
+ 			<Image Source="/Assets/microphone.png" Height="22" Width="22" Margin="0,0,50,0" HorizontalAlignment="Right"/>
         </Border>
 		<Border 
 			Background="#494949"
