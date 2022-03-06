@@ -16,8 +16,8 @@
             <RowDefinition />
         </sg:SpacedGrid.RowDefinitions>
         <sg:SpacedGrid.ColumnDefinitions>
-            <ColumnDefinition />
-            <ColumnDefinition />
+            <ColumnDefinition Width="240"/>
+            <ColumnDefinition Width="240"/>
             <ColumnDefinition />
             <ColumnDefinition />
             <ColumnDefinition />
