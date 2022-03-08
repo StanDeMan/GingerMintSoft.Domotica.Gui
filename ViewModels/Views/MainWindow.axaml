@@ -27,7 +27,7 @@
             </rxui:RoutedViewHost.DefaultContent>
         </rxui:RoutedViewHost>
         <StackPanel 
-			Background="#01BA9A"
+			Background="#01EBC2"
 			Orientation="Horizontal" 
 			Grid.Row="2">
 			<!--<Button Content="Full Screen" Click="FullScreenClick" />
