@@ -26,7 +26,10 @@
                 </views:DashBoard>
             </rxui:RoutedViewHost.DefaultContent>
         </rxui:RoutedViewHost>
-        <StackPanel Orientation="Horizontal" Grid.Row="2">
+        <StackPanel 
+			Background="#01BA9A"
+			Orientation="Horizontal" 
+			Grid.Row="2">
 			<!--<Button Content="Full Screen" Click="FullScreenClick" />
 			<Button Content="Change Theme" Command="{Binding ChangeTheme}" />-->
             <Button 
