@@ -33,7 +33,7 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
             _timer.Start();
         }
 
-        string notification = "You have got 1 new alert";
+        string notification = "You have got";
 
         public string Notification
         {
@@ -42,6 +42,18 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
             {
                 notification = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Notification)));
+            }
+        }
+
+        string alert = "1 new alert";
+
+        public string Alert
+        {
+            get => alert;
+            set 
+            {
+                alert = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Alert)));
             }
         }
 

@@ -18,7 +18,7 @@
         </sg:SpacedGrid.RowDefinitions>
         <sg:SpacedGrid.ColumnDefinitions>
             <ColumnDefinition Width="190"/>
-            <ColumnDefinition Width="300"/>
+            <ColumnDefinition Width="290"/>
             <ColumnDefinition />
             <ColumnDefinition />
             <ColumnDefinition />
@@ -100,6 +100,18 @@
 						VerticalAlignment="Top" 
 						Margin="54,12,0,0"
 						Text="{Binding Notification}">
+					</TextBlock>
+				</StackPanel>
+				<StackPanel Orientation="Horizontal">
+					<TextBlock
+						x:Name="Alert" 
+						Foreground="WhiteSmoke" 
+						HorizontalAlignment="Left" 
+						FontSize="20" 
+						TextWrapping="Wrap" 
+						VerticalAlignment="Top" 
+						Margin="178,12,0,0"
+						Text="{Binding Alert}">
 					</TextBlock>
 				</StackPanel>
 			</Grid>
