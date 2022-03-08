@@ -29,8 +29,28 @@
         <StackPanel Orientation="Horizontal" Grid.Row="2">
 			<!--<Button Content="Full Screen" Click="FullScreenClick" />
 			<Button Content="Change Theme" Command="{Binding ChangeTheme}" />-->
-            <ToggleButton Content="Dashboard" Command="{Binding GoDashBoard}" />
-            <ToggleButton Content="Appliances" Command="{Binding GoAppliances}" />
+            <Button 
+				x:Name="DashBoard"
+				Content="Dashboard"
+				Background="#01BA9A"
+                Width="160"
+                Height="118"
+				Command="{Binding GoDashBoard}" />
+            <Button 
+				x:Name="Appliances"
+				Content="Appliances"
+				Background="#01BA9A"
+                Width="160"
+                Height="118"
+				Command="{Binding GoAppliances}" />
+			<Button 
+				x:Name="Lighting"
+                Background="#01BA9A"
+				Content="Test"
+                Width="160"
+                Height="118">
+                <Image Source="/Assets/warning.png" Height="60" Width="60" HorizontalAlignment="Stretch" />
+            </Button>
 		</StackPanel>
 	</Grid>
 </Window>
