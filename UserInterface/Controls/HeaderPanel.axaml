@@ -36,14 +36,14 @@
 				Background="Transparent">
 				<StackPanel Orientation="Horizontal">
 					<TextBlock
-						x:Name="DateTime" 
+						x:Name="ActualDateTime" 
 						Foreground="WhiteSmoke" 
 						HorizontalAlignment="Left" 
 						FontSize="20" 
 						TextWrapping="Wrap" 
 						VerticalAlignment="Top" 
 						Margin="50,12,0,0"
-						Text="12:44h   24 May 2022"> <!-- operate with <Run> later and put a binding here! -->
+						Text="{Binding ActualDateTime}">
 					</TextBlock>
 				</StackPanel>
 			</Grid>
@@ -80,7 +80,7 @@
 						TextWrapping="Wrap" 
 						VerticalAlignment="Top" 
 						Margin="54,12,0,0"
-						Text="You have got 1 new alert"> <!-- operate with <Run> later and put a binding here! -->
+						Text="{Binding Notification}">
 					</TextBlock>
 				</StackPanel>
 			</Grid>
