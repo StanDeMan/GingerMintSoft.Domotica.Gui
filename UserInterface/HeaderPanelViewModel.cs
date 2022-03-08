@@ -21,11 +21,13 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
             {
                 var date = DateTime.Now;
 
-                ActualDateTime = _actualDateTime = 
-                    $"{date.Hour:00}:{date.Minute:00}:{date.Second:00} Uhr    " +
-                    $"{date.Day:00} " +
-                    $"{date.ToString("MMMM", CultureInfo.GetCultureInfo("de-DE"))} " +
-                    $"{date.Year}";
+                ActualTime = 
+                    $"{date.Hour:00}:{date.Minute:00}:{date.Second:00} Uhr";                // time
+
+                ActualDate = 
+                    $"{date.Day:00} " +                                                     // day
+                    $"{date.ToString("MMMM", CultureInfo.GetCultureInfo("de-DE"))} " +      // month
+                    $"{date.Year}";                                                         // year
             };
 
             _timer.Start();
@@ -43,15 +45,27 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
             }
         }
 
-        private string _actualDateTime = "";
+        private string actualDate = "";
            
-        public string ActualDateTime
+        public string ActualDate
         {
-            get => _actualDateTime;
+            get => actualDate;
             set 
             {
-                _actualDateTime = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ActualDateTime)));
+                actualDate = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ActualDate)));
+            }
+        }
+
+        private string actualTime = "";
+           
+        public string ActualTime
+        {
+            get => actualTime;
+            set 
+            {
+                actualTime = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ActualTime)));
             }
         }
 
