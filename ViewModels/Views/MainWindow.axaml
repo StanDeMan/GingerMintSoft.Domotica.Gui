@@ -30,8 +30,6 @@
 			Background="#01EBC2"
 			Orientation="Horizontal" 
 			Grid.Row="2">
-			<!--<Button Content="Full Screen" Click="FullScreenClick" />
-			<Button Content="Change Theme" Command="{Binding ChangeTheme}" />-->
             <Button 
 				x:Name="DashBoard"
 				Content="Dashboard"
@@ -58,6 +56,9 @@
                     <TextBlock Text="Lighting" Margin="0,-20" HorizontalAlignment="Center"/>
                 </StackPanel>
             </Button>
+			<!-- only for testing purpose -->
+			<Button Content="Full Screen" Click="FullScreenClick" />
+			<Button Content="Change Theme" Command="{Binding ChangeTheme}" />
 		</StackPanel>
 	</Grid>
 </Window>
