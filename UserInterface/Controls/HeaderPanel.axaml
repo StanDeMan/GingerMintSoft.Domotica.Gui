@@ -80,14 +80,19 @@
 			Margin="-1"
 			Grid.Row="0" 
 			Grid.Column="2" 
-			Grid.ColumnSpan="4" 
+			Grid.ColumnSpan="3" 
 			HorizontalAlignment="Stretch" 
 			VerticalAlignment="Stretch">
 			<Grid 
 				HorizontalAlignment="Stretch" 
 				Background="Transparent">
 				<StackPanel>
-					<Image Source="/Assets/warning.png" Height="20" Width="20" Margin="18,16,80,0" HorizontalAlignment="Left"/>
+					<Image 
+						Source="/Assets/warning.png" 
+						Height="20" 
+						Width="20" 
+						Margin="18,16,80,0" 
+						HorizontalAlignment="Left"/>
 				</StackPanel>
 				<StackPanel 
 					Orientation="Horizontal">
@@ -110,7 +115,7 @@
 						FontSize="20" 
 						TextWrapping="Wrap" 
 						VerticalAlignment="Top" 
-						Margin="178,12,0,0"
+						Margin="178,12,100,0"
 						Text="{Binding Alert}">
 					</TextBlock>
 				</StackPanel>
@@ -119,8 +124,8 @@
 		<Border 
 			Background="#494949"
 			Grid.Row="0" 
-			Grid.Column="4" 
-			Grid.ColumnSpan="2" 
+			Grid.Column="5" 
+			Grid.ColumnSpan="1" 
 			HorizontalAlignment="Stretch" 
 			VerticalAlignment="Stretch">
  			<Image Source="/Assets/microphone.png" Height="22" Width="22" Margin="0,0,50,0" HorizontalAlignment="Right"/>
