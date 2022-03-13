@@ -27,9 +27,8 @@
 		<Border 
 			Background="#333333"
 			Grid.Row="0" 
-			Grid.Column="0" 
-			Grid.ColumnSpan="1" 
-			HorizontalAlignment="Stretch" 
+			Grid.Column="0"
+            HorizontalAlignment="Stretch" 
 			VerticalAlignment="Stretch">
 			<Grid 
 				HorizontalAlignment="Stretch" 
@@ -52,9 +51,8 @@
 		<Border 
 			Background="#333333"
 			Grid.Row="0" 
-			Grid.Column="1" 
-			Grid.ColumnSpan="1" 
-			HorizontalAlignment="Stretch" 
+			Grid.Column="1"
+            HorizontalAlignment="Stretch" 
 			VerticalAlignment="Stretch">
 			<Grid 
 				HorizontalAlignment="Stretch" 
@@ -124,9 +122,8 @@
 		<Border 
 			Background="#494949"
 			Grid.Row="0" 
-			Grid.Column="5" 
-			Grid.ColumnSpan="1" 
-			HorizontalAlignment="Stretch" 
+			Grid.Column="5"
+            HorizontalAlignment="Stretch" 
 			VerticalAlignment="Stretch">
  			<Image Source="/Assets/microphone.png" Height="22" Width="22" Margin="0,0,50,0" HorizontalAlignment="Right"/>
         </Border>
