@@ -18,12 +18,13 @@
     <None Remove="Assets\domotica-iot_64.png" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Avalonia" Version="0.10.12" />
-    <PackageReference Include="Avalonia.Desktop" Version="0.10.12" />
+    <PackageReference Include="Avalonia" Version="0.10.13" />
+    <PackageReference Include="Avalonia.Desktop" Version="0.10.13" />
     <!--Condition below is needed to remove Avalonia.Diagnostics package from build output in Release configuration.-->
-    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.12" />
-    <PackageReference Include="Avalonia.LinuxFramebuffer" Version="0.10.12" />
-    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.12" />
+    <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="0.10.13" />
+    <PackageReference Include="Avalonia.LinuxFramebuffer" Version="0.10.13" />
+    <PackageReference Include="Avalonia.ReactiveUI" Version="0.10.13" />
+    <PackageReference Include="Avalonia.Xaml.Behaviors" Version="0.10.12.2" />
     <PackageReference Include="ReactiveUI.Fody" Version="17.1.50" />
     <PackageReference Include="ReactiveUI.Validation" Version="2.2.1" />
   </ItemGroup>
