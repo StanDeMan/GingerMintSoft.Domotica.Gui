@@ -3,13 +3,13 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" 
-			 d:DesignWidth="800" 
+			 d:DesignWidth="1280" 
 			 d:DesignHeight="120"
              x:Class="GingerMintSoft.Domotica.Gui.UserInterface.Controls.NavigationPanel">
         <StackPanel Orientation="Horizontal" Background="Transparent">
             <RadioButton IsChecked="True">
                 <StackPanel>
-                    <Image Source="/Assets/dashboard.png" Margin="0,20" Height="48" Width="48" HorizontalAlignment="Center" />
+                    <Image Source="/Assets/dashboard.png" Margin="0,20" Height="42" Width="42" HorizontalAlignment="Center" />
                     <TextBlock Text="Dashboard" Margin="0,-12" HorizontalAlignment="Center" Foreground="White"/>
                 </StackPanel>
                 <RadioButton.Template>
@@ -27,7 +27,7 @@
             </RadioButton>
             <RadioButton >
                 <StackPanel>
-                    <Image Source="/Assets/air-conditioning.png" Margin="0,20" Height="48" Width="48" HorizontalAlignment="Center" />
+                    <Image Source="/Assets/air-conditioning.png" Margin="0,20" Height="42" Width="42" HorizontalAlignment="Center" />
                     <TextBlock Text="Air Conditioning" Margin="0,-12" HorizontalAlignment="Center" Foreground="White"/>
                 </StackPanel>
                 <RadioButton.Template>
@@ -38,6 +38,114 @@
                             Background="Transparent"
                             Click="ButtonOnClick"
                             Command="{Binding GoAppliances}"
+                            IsChecked="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
+                            Content="{Binding Content, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"/>
+                    </ControlTemplate>
+                </RadioButton.Template>
+            </RadioButton>
+            <RadioButton >
+                <StackPanel>
+                    <Image Source="/Assets/smart-lighting.png" Margin="0,20" Height="42" Width="42" HorizontalAlignment="Center" />
+                    <TextBlock Text="Lighting" Margin="0,-12" HorizontalAlignment="Center" Foreground="White"/>
+                </StackPanel>
+                <RadioButton.Template>
+                    <ControlTemplate>
+                        <ToggleButton 
+                            Height="120"
+                            Width="160"
+                            Background="Transparent"
+                            Click="ButtonOnClick"
+                            Command="{Binding GoDashBoard}"
+                            IsChecked="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
+                            Content="{Binding Content, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"/>
+                    </ControlTemplate>
+                </RadioButton.Template>
+            </RadioButton>
+            <RadioButton >
+                <StackPanel>
+                    <Image Source="/Assets/electronics.png" Margin="0,20" Height="42" Width="42" HorizontalAlignment="Center" />
+                    <TextBlock Text="Appliances" Margin="0,-12" HorizontalAlignment="Center" Foreground="White"/>
+                </StackPanel>
+                <RadioButton.Template>
+                    <ControlTemplate>
+                        <ToggleButton 
+                            Height="120"
+                            Width="160"
+                            Background="Transparent"
+                            Click="ButtonOnClick"
+                            Command="{Binding GoDashBoard}"
+                            IsChecked="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
+                            Content="{Binding Content, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"/>
+                    </ControlTemplate>
+                </RadioButton.Template>
+            </RadioButton>
+            <RadioButton >
+                <StackPanel>
+                    <Image Source="/Assets/chat.png" Margin="0,20" Height="42" Width="42" HorizontalAlignment="Center" />
+                    <TextBlock Text="Communication" Margin="0,-12" HorizontalAlignment="Center" Foreground="White"/>
+                </StackPanel>
+                <RadioButton.Template>
+                    <ControlTemplate>
+                        <ToggleButton 
+                            Height="120"
+                            Width="160"
+                            Background="Transparent"
+                            Click="ButtonOnClick"
+                            Command="{Binding GoDashBoard}"
+                            IsChecked="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
+                            Content="{Binding Content, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"/>
+                    </ControlTemplate>
+                </RadioButton.Template>
+            </RadioButton>
+            <RadioButton >
+                <StackPanel>
+                    <Image Source="/Assets/internet-security.png" Margin="0,20" Height="42" Width="42" HorizontalAlignment="Center" />
+                    <TextBlock Text="Security" Margin="0,-12" HorizontalAlignment="Center" Foreground="White"/>
+                </StackPanel>
+                <RadioButton.Template>
+                    <ControlTemplate>
+                        <ToggleButton 
+                            Height="120"
+                            Width="160"
+                            Background="Transparent"
+                            Click="ButtonOnClick"
+                            Command="{Binding GoDashBoard}"
+                            IsChecked="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
+                            Content="{Binding Content, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"/>
+                    </ControlTemplate>
+                </RadioButton.Template>
+            </RadioButton>
+            <RadioButton >
+                <StackPanel>
+                    <Image Source="/Assets/cctv-camera.png" Margin="0,20" Height="42" Width="42" HorizontalAlignment="Center" />
+                    <TextBlock Text="CCTV" Margin="0,-12" HorizontalAlignment="Center" Foreground="White"/>
+                </StackPanel>
+                <RadioButton.Template>
+                    <ControlTemplate>
+                        <ToggleButton 
+                            Height="120"
+                            Width="160"
+                            Background="Transparent"
+                            Click="ButtonOnClick"
+                            Command="{Binding GoDashBoard}"
+                            IsChecked="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
+                            Content="{Binding Content, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"/>
+                    </ControlTemplate>
+                </RadioButton.Template>
+            </RadioButton>
+            <RadioButton>
+                <StackPanel HorizontalAlignment="Stretch">
+                    <Image Source="/Assets/settings.png" Margin="0,20" Height="42" Width="42" HorizontalAlignment="Center" />
+                    <TextBlock Text="Settings" Margin="0,-12" HorizontalAlignment="Center" Foreground="White"/>
+                </StackPanel>
+                <RadioButton.Template>
+                    <ControlTemplate>
+                        <ToggleButton 
+                            Height="120"
+                            MinWidth="160"
+                            Background="Transparent"
+                            Click="ButtonOnClick"
+                            Command="{Binding GoDashBoard}"
                             IsChecked="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
                             Content="{Binding Content, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"/>
                     </ControlTemplate>
