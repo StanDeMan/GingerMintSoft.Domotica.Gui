@@ -4,7 +4,34 @@
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" 
 			 d:DesignWidth="800" 
-			 d:DesignHeight="100"
+			 d:DesignHeight="120"
              x:Class="GingerMintSoft.Domotica.Gui.UserInterface.Controls.NavigationPanel">
-        <TextBlock Text="Navigation Panel" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <StackPanel Orientation="Horizontal" Background="Transparent">
+            <RadioButton Content="Dashboard" >
+                <RadioButton.Template>
+                    <ControlTemplate>
+                        <ToggleButton 
+                            Height="120"
+                            Width="160"
+                            Click="ButtonOnClick"
+                            Command="{Binding GoDashBoard}"
+                            IsChecked="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
+                            Content="{Binding Content, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"/>
+                    </ControlTemplate>
+                </RadioButton.Template>
+            </RadioButton>
+            <RadioButton Content="Air Conditioning" >
+                <RadioButton.Template>
+                    <ControlTemplate>
+                        <ToggleButton 
+                            Height="120"
+                            Width="160"
+                            Click="ButtonOnClick"
+                            Command="{Binding GoAppliances}"
+                            IsChecked="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
+                            Content="{Binding Content, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"/>
+                    </ControlTemplate>
+                </RadioButton.Template>
+            </RadioButton>
+        </StackPanel>
 </UserControl>
