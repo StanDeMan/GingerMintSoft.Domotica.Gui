@@ -10,8 +10,8 @@
         Icon="/Assets/domotica-iot.ico"
         Title="GingerMintSoft.Domotica.Gui"
 		Topmost="True"
-		MinWidth="1024"
-		MinHeight="600"
+		MinWidth="1280"
+		MinHeight="800"
 		WindowState="Maximized"
 		WindowStartupLocation="CenterScreen"
         ShowInTaskbar="True">
@@ -33,9 +33,14 @@
             <controls:NavigationPanel>
             </controls:NavigationPanel>
 		</StackPanel>
+        <StackPanel Grid.Row="0">
+            <Border
+                Background="Transparent">
+                <Button Click="FullScreenOnClick" Height="22" Width="22" Margin="0,14,16,0" HorizontalAlignment="Right"/>
+            </Border>
+        </StackPanel>
     </Grid>
 </Window>
 <!--
-<Button Content="Full Screen" Click="FullScreenClick" />
 <Button Content="Change Theme" Command="{Binding ChangeTheme}" />
 -->

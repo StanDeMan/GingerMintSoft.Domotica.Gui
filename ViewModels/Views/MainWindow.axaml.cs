@@ -22,7 +22,7 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels.Views
             AvaloniaXamlLoader.Load(this);
         }
 
-        public void FullScreenClick(object sender, RoutedEventArgs e)
+        public void FullScreenOnClick(object sender, RoutedEventArgs e)
         {
             WindowState = _fullScreen 
                 ? WindowState.Maximized 
