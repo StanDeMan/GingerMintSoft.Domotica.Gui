@@ -7,12 +7,17 @@
 			 d:DesignHeight="120"
              x:Class="GingerMintSoft.Domotica.Gui.UserInterface.Controls.NavigationPanel">
         <StackPanel Orientation="Horizontal" Background="Transparent">
-            <RadioButton Content="Dashboard" >
+            <RadioButton IsChecked="True">
+                <StackPanel>
+                    <Image Source="/Assets/dashboard.png" Margin="0,20" Height="48" Width="48" HorizontalAlignment="Center" />
+                    <TextBlock Text="Dashboard" Margin="0,-12" HorizontalAlignment="Center" Foreground="White"/>
+                </StackPanel>
                 <RadioButton.Template>
                     <ControlTemplate>
                         <ToggleButton 
                             Height="120"
                             Width="160"
+                            Background="Transparent"
                             Click="ButtonOnClick"
                             Command="{Binding GoDashBoard}"
                             IsChecked="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
@@ -20,12 +25,17 @@
                     </ControlTemplate>
                 </RadioButton.Template>
             </RadioButton>
-            <RadioButton Content="Air Conditioning" >
+            <RadioButton >
+                <StackPanel>
+                    <Image Source="/Assets/air-conditioning.png" Margin="0,20" Height="48" Width="48" HorizontalAlignment="Center" />
+                    <TextBlock Text="Air Conditioning" Margin="0,-12" HorizontalAlignment="Center" Foreground="White"/>
+                </StackPanel>
                 <RadioButton.Template>
                     <ControlTemplate>
                         <ToggleButton 
                             Height="120"
                             Width="160"
+                            Background="Transparent"
                             Click="ButtonOnClick"
                             Command="{Binding GoAppliances}"
                             IsChecked="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"

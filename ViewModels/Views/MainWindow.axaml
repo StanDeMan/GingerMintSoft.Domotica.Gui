@@ -36,17 +36,6 @@
     </Grid>
 </Window>
 <!--
-<Button 
-    x:Name="Lighting"
-    Background="#01BA9A"
-    Width="160"
-    Height="118">
-    --><!--<Image Source="/Assets/warning.png" Height="60" Width="60" HorizontalAlignment="Stretch" />--><!--
-    <StackPanel>
-        <Image Source="/Assets/warning.png" Margin="0,20" Height="48" Width="48" HorizontalAlignment="Center" />
-        <TextBlock Text="Lighting" Margin="0,-20" HorizontalAlignment="Center"/>
-    </StackPanel>
-</Button>
---><!-- only for testing purpose --><!--
 <Button Content="Full Screen" Click="FullScreenClick" />
-<Button Content="Change Theme" Command="{Binding ChangeTheme}" />-->
+<Button Content="Change Theme" Command="{Binding ChangeTheme}" />
+-->
