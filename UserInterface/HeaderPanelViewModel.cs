@@ -1,23 +1,20 @@
-﻿using Avalonia.Threading;
-using ReactiveUI;
-using System;
+﻿using System;
 using System.ComponentModel;
 using System.Globalization;
+using Avalonia.Threading;
 
-namespace GingerMintSoft.Domotica.Gui.ViewModels
+namespace GingerMintSoft.Domotica.Gui.UserInterface
 {
     public class HeaderPanelViewModel : INotifyPropertyChanged
     {
-        private readonly DispatcherTimer _timer;
-
         public HeaderPanelViewModel()
         {
-            _timer = new DispatcherTimer 
+            var timer = new DispatcherTimer 
             {
                 Interval = TimeSpan.FromSeconds(1)
             };
 
-            _timer.Tick += (sender, args) => 
+            timer.Tick += (sender, args) => 
             {
                 var date = DateTime.Now;
 
@@ -30,53 +27,53 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
                     $"{date.Year}";                                                         // year
             };
 
-            _timer.Start();
+            timer.Start();
         }
 
-        string notification = "You have got";
+        string _notification = "You have got";
 
         public string Notification
         {
-            get => notification;
+            get => _notification;
             set 
             {
-                notification = value;
+                _notification = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Notification)));
             }
         }
 
-        string alert = "1 new alert";
+        string _alert = "1 new alert";
 
         public string Alert
         {
-            get => alert;
+            get => _alert;
             set 
             {
-                alert = value;
+                _alert = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(Alert)));
             }
         }
 
-        private string actualDate = "";
+        private string _actualDate = "";
            
         public string ActualDate
         {
-            get => actualDate;
+            get => _actualDate;
             set 
             {
-                actualDate = value;
+                _actualDate = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ActualDate)));
             }
         }
 
-        private string actualTime = "";
+        private string _actualTime = "";
            
         public string ActualTime
         {
-            get => actualTime;
+            get => _actualTime;
             set 
             {
-                actualTime = value;
+                _actualTime = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ActualTime)));
             }
         }
