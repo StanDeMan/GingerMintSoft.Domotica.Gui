@@ -8,10 +8,6 @@
 			 d:DesignHeight="120"
              x:Class="GingerMintSoft.Domotica.Gui.UserInterface.Controls.NavigationPanel">
     <StackPanel Orientation="Horizontal" Background="Transparent">
-        <!--<templates:NavigationButtonTemplatedControl
-			ButtonImage="/Assets/dashboard.png"
-			ButtonIsChecked="True">
-        </templates:NavigationButtonTemplatedControl>-->
         <RadioButton 
 			IsChecked="True">
             <StackPanel>
@@ -22,7 +18,6 @@
             <RadioButton.Template>
                 <ControlTemplate>
                     <ToggleButton
-						x:Name="DashBoard"
                         Height="120"
                         Width="160"
 						Click="ButtonOnClick"
