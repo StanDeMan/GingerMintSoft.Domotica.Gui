@@ -26,14 +26,9 @@
                 </views:DashBoard>
             </rxui:RoutedViewHost.DefaultContent>
         </rxui:RoutedViewHost>
-        <StackPanel 
-            Background="#1A1C1C"
-			Orientation="Horizontal" 
-			Grid.Row="2">
-            <controls:NavigationPanel>
-            </controls:NavigationPanel>
-		</StackPanel>
-        <StackPanel Grid.Row="0">
+        <controls:NavigationPanel Grid.Row="2">
+        </controls:NavigationPanel>
+		<StackPanel Grid.Row="0">
             <Border
                 Background="Transparent">
                 <Button Click="FullScreenOnClick" Height="22" Width="22" Margin="0,14,16,0" HorizontalAlignment="Right"/>

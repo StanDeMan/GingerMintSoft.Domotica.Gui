@@ -1,0 +1,29 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d" 
+			 d:DesignWidth="160" 
+			 d:DesignHeight="120"
+             x:Class="GingerMintSoft.Domotica.Gui.UserInterface.UserControls.NavigationToggleButtonControl"
+			 DataContext="{Binding RelativeSource={RelativeSource Self}}">
+    <RadioButton 
+	    IsChecked="{Binding IsSelected}">
+        <StackPanel>
+            <Image Source="/Assets/dashboard.png" Margin="0,20" Height="38" Width="38" HorizontalAlignment="Center" />
+            <TextBlock Text="Dashboard" Margin="0,-10" HorizontalAlignment="Center" Foreground="White"/>
+            <Ellipse Fill="White" Opacity="0.25" Margin="0,-80,0,0" Height="54" Width="54" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        </StackPanel>
+        <RadioButton.Template>
+            <ControlTemplate>
+                <ToggleButton
+                    Height="120"
+                    Width="160"
+                    Background="Transparent"
+			        Command="{Binding GoToView}"
+                    IsChecked="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
+                    Content="{Binding Content, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"/>
+            </ControlTemplate>
+        </RadioButton.Template>
+    </RadioButton>
+</UserControl>

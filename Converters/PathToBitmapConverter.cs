@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
 using System.Reflection;
 using Avalonia;
@@ -10,7 +11,8 @@ namespace GingerMintSoft.Domotica.Gui.Converters
 {
     public class PathToBitmapConverter : IValueConverter
     {
-        public static PathToBitmapConverter Instance = new PathToBitmapConverter();
+        [SuppressMessage("CodeQuality", "IDE0052:Remove unread private members", Justification = "<Pending>")]
+        private static readonly PathToBitmapConverter Instance = new();
 
         public object? Convert(object? value, Type targetType, object? parameter, CultureInfo culture)
         {
