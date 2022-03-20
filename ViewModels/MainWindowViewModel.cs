@@ -23,6 +23,9 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
         // he command that navigates to air condition view 
         public ReactiveCommand<Unit, IRoutableViewModel> GoAirCondition { get; }
 
+         // he command that navigates to lighting view 
+        public ReactiveCommand<Unit, IRoutableViewModel> GoLighting { get; }
+
         public MainWindowViewModel(StyleManager styles)
         {
             ChangeTheme = ReactiveCommand.Create(() => styles.UseTheme(styles.CurrentTheme switch
@@ -38,6 +41,7 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
 
             Locator.CurrentMutable.Register(() => new DashBoard(), typeof(IViewFor<DashBoardViewModel>));
             Locator.CurrentMutable.Register(() => new AirCondition(), typeof(IViewFor<AirConditionViewModel>));
+            Locator.CurrentMutable.Register(() => new Lighting(), typeof(IViewFor<LightingViewModel>));
             Locator.CurrentMutable.Register(() => new Appliances(), typeof(IViewFor<AppliancesViewModel>));
 
             GoDashBoard = ReactiveCommand.CreateFromObservable(() => 
@@ -45,6 +49,9 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
 
             GoAirCondition = ReactiveCommand.CreateFromObservable(() => 
                 Router.Navigate.Execute(new AirConditionViewModel(this)));
+
+            GoLighting = ReactiveCommand.CreateFromObservable(() => 
+                Router.Navigate.Execute(new LightingViewModel(this)));
 
             GoAppliances = ReactiveCommand.CreateFromObservable(() => 
                 Router.Navigate.Execute(new AppliancesViewModel(this)));

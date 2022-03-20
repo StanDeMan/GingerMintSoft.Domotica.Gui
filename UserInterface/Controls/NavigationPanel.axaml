@@ -74,7 +74,7 @@
 						HorizontalAlignment="Stretch"
                         Background="Transparent"
                         Click="ButtonOnClick"						 
-			            Command="{Binding GoDashBoard}"
+			            Command="{Binding GoLighting}"
                         IsChecked="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
                         Content="{Binding Content, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"/>
                 </ControlTemplate>
@@ -93,7 +93,7 @@
 						HorizontalAlignment="Stretch"
                         Background="Transparent"
                         Click="ButtonOnClick"
-						Command="{Binding GoDashBoard}"
+						Command="{Binding GoAppliances}"
                         IsChecked="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
                         Content="{Binding Content, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"/>
                 </ControlTemplate>
