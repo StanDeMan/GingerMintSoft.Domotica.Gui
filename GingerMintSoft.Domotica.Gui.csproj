@@ -16,7 +16,9 @@
     <None Remove="Assets\domotica-iot_32.png" />
     <None Remove="Assets\domotica-iot_48.png" />
     <None Remove="Assets\domotica-iot_64.png" />
+    <None Remove="Assets\minimize.png" />
     <None Remove="Assets\resize.png" />
+    <None Remove="Assets\zoom.png" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.10.13" />

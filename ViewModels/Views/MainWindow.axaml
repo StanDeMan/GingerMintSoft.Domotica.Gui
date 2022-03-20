@@ -16,6 +16,20 @@
 		WindowStartupLocation="CenterScreen"
 		Background="#545454"
         ShowInTaskbar="True">
+	<Window.Styles>
+        <Style Selector="ToggleButton DrawingPresenter.tbchecked">
+            <Setter Property="IsVisible" Value="false"/>
+        </Style>
+        <Style Selector="ToggleButton:checked DrawingPresenter.tbchecked">
+            <Setter Property="IsVisible" Value="true"/>
+        </Style>
+        <Style Selector="ToggleButton DrawingPresenter.tbunchecked">
+            <Setter Property="IsVisible" Value="true"/>
+        </Style>
+        <Style Selector="ToggleButton:checked DrawingPresenter.tbunchecked">
+            <Setter Property="IsVisible" Value="false"/>
+        </Style>	
+	</Window.Styles>
     <Grid RowDefinitions="50, 6*, 120">
         <StackPanel Grid.Row="0">
             <controls:HeaderPanel Height="50"/>
@@ -26,25 +40,34 @@
             </rxui:RoutedViewHost.DefaultContent>
         </rxui:RoutedViewHost>
         <controls:NavigationPanel Grid.Row="2"/>
-		<StackPanel Grid.Row="0">
+		<StackPanel 
+			Grid.Row="0"
+			HorizontalAlignment="Right">
             <Border
                 Background="Transparent">
-                <Button 
+                <ToggleButton 
+					Width="24"
+					Height="24"
+					Margin="8,12"
+					Classes="vtrx" 
 					Click="FullScreenOnClick" 
-					Height="22" 
-					Width="22" 
-					Margin="0,14,16,0"
-					HorizontalAlignment="Right">
-					<StackPanel>
-                        <Image 
-							Width="16"
-							Height="16"
-							Margin="-4,-14"
-							HorizontalAlignment="Center"
-							VerticalAlignment="Center"
-							Source="/Assets/resize.png"/>
-                    </StackPanel>
-				</Button>
+					IsChecked="{Binding Path=vtrx.zoom}" 
+					ToolTip.Tip="Fullscreem Mode">
+                    <Panel>
+                        <DrawingPresenter 
+							Width="18"
+							Height="18"
+							Margin="1,1"
+							Drawing="{DynamicResource zoom}" 
+							Classes="tbunchecked"/>
+                        <DrawingPresenter 
+							Width="18"
+							Height="18"
+							Margin="1,1" 
+							Drawing="{DynamicResource minimize}" 
+							Classes="tbchecked"/>
+                    </Panel>
+                </ToggleButton>                
             </Border>
         </StackPanel>
     </Grid>
