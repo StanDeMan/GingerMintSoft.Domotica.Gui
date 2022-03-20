@@ -20,7 +20,8 @@
         </Grid.ColumnDefinitions>    
         <Grid.RowDefinitions>    
             <RowDefinition/>    
-        </Grid.RowDefinitions>    
+        </Grid.RowDefinitions> 
+	    <Rectangle Grid.Row="0" Grid.ColumnSpan="8" Fill="#01BA9A" VerticalAlignment="Top" Height="3"/>
 		<RadioButton 
 			Grid.Column="0" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" IsChecked="True">
             <StackPanel>

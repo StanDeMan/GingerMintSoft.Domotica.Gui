@@ -74,7 +74,7 @@
 			</Grid>
         </Border>
 		<Border 
-			Background="#494949"
+			Background="#545454"
 			Margin="-1"
 			Grid.Row="0" 
 			Grid.Column="2" 
@@ -120,7 +120,7 @@
 			</Grid>
 		</Border>
 		<Border 
-			Background="#494949"
+			Background="#545454"
 			Grid.Row="0" 
 			Grid.Column="5"
             HorizontalAlignment="Stretch" 
