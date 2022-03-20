@@ -14,11 +14,14 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
         public string Greeting => "Welcome to Domotica.Gui!";
         public RoutingState Router { get; } = new RoutingState();
 
-        // The command that navigates a user to first view model.
+        // The command that navigates to the dash board
         public ReactiveCommand<Unit, IRoutableViewModel> GoDashBoard { get; }
 
-        // The command that navigates a user back.
+        // The command that navigates to appliances view
         public ReactiveCommand<Unit, IRoutableViewModel> GoAppliances { get; }
+
+        // he command that navigates to air condition view 
+        public ReactiveCommand<Unit, IRoutableViewModel> GoAirCondition { get; }
 
         public MainWindowViewModel(StyleManager styles)
         {
@@ -34,10 +37,14 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
             }));
 
             Locator.CurrentMutable.Register(() => new DashBoard(), typeof(IViewFor<DashBoardViewModel>));
+            Locator.CurrentMutable.Register(() => new AirCondition(), typeof(IViewFor<AirConditionViewModel>));
             Locator.CurrentMutable.Register(() => new Appliances(), typeof(IViewFor<AppliancesViewModel>));
 
             GoDashBoard = ReactiveCommand.CreateFromObservable(() => 
                 Router.Navigate.Execute(new DashBoardViewModel(this)));
+
+            GoAirCondition = ReactiveCommand.CreateFromObservable(() => 
+                Router.Navigate.Execute(new AirConditionViewModel(this)));
 
             GoAppliances = ReactiveCommand.CreateFromObservable(() => 
                 Router.Navigate.Execute(new AppliancesViewModel(this)));

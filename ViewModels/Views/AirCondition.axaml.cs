@@ -4,9 +4,9 @@ using Avalonia.ReactiveUI;
 
 namespace GingerMintSoft.Domotica.Gui.ViewModels.Views
 {
-    public class Appliances : ReactiveUserControl<AppliancesViewModel>
+    public class AirCondition : ReactiveUserControl<AirConditionViewModel>
     {
-        public Appliances()
+        public AirCondition()
         {
             InitializeComponent();
         }

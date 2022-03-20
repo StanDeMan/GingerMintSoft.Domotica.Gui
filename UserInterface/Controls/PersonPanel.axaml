@@ -6,13 +6,21 @@
 			 d:DesignWidth="800" 
 			 d:DesignHeight="120"
              x:Class="GingerMintSoft.Domotica.Gui.UserInterface.Controls.PersonPanel">
-	<Grid Background="Transparent">    
-        <Grid.ColumnDefinitions>    
-            <ColumnDefinition/>    
-        </Grid.ColumnDefinitions>    
-        <Grid.RowDefinitions>    
-            <RowDefinition/>    
-        </Grid.RowDefinitions>   
-        <TextBlock Grid.Row="0" Text="Person Panel" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-	</Grid>
+    <TextBlock Grid.Row="0" Text="Person Panel" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+	<!--<ListBox x:Name="myListView">
+        <ListBox.ItemsPanel>
+            <ItemsPanelTemplate>
+                <WrapPanel Orientation="Horizontal"/>
+            </ItemsPanelTemplate>
+        </ListBox.ItemsPanel>
+        <ListBox.ItemTemplate>
+            <DataTemplate>
+                <StackPanel Orientation="Horizontal">
+                    <Button FontSize="10" Foreground="Salmon"
+                            BorderThickness="0" Content="x" Background="Transparent" />
+                    <Label FontSize="10" Foreground="SteelBlue" Width="Auto" Content="{Binding}"/>
+                </StackPanel>
+            </DataTemplate>
+        </ListBox.ItemTemplate>
+    </ListBox>-->
 </UserControl>
