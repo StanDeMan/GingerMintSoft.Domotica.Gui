@@ -33,8 +33,18 @@
 					Click="FullScreenOnClick" 
 					Height="22" 
 					Width="22" 
-					Margin="0,14,16,0" 
-					HorizontalAlignment="Right"/>
+					Margin="0,14,16,0"
+					HorizontalAlignment="Right">
+					<StackPanel>
+                        <Image 
+							Width="16"
+							Height="16"
+							Margin="-4,-14"
+							HorizontalAlignment="Center"
+							VerticalAlignment="Center"
+							Source="/Assets/resize.png"/>
+                    </StackPanel>
+				</Button>
             </Border>
         </StackPanel>
     </Grid>
