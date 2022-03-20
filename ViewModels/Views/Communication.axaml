@@ -5,12 +5,12 @@
              mc:Ignorable="d" 
 			 d:DesignWidth="800" 
 			 d:DesignHeight="450"
-             x:Class="GingerMintSoft.Domotica.Gui.ViewModels.Views.Lighting">
-  <TextBlock 
-	  Grid.Row="0" 
-	  FontSize="48" 
-	  Foreground="Silver" 
-	  Text="Ligthing" 
-	  HorizontalAlignment="Center" 
-	  VerticalAlignment="Center"/>
+             x:Class="GingerMintSoft.Domotica.Gui.ViewModels.Views.Communication">
+    <TextBlock 
+		Grid.Row="0" 
+		FontSize="48"
+		Foreground="Silver"
+		Text="Communication" 
+		HorizontalAlignment="Center" 
+		VerticalAlignment="Center"/>
 </UserControl>
