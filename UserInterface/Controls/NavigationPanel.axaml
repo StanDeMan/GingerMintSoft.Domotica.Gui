@@ -169,7 +169,7 @@
 						HorizontalAlignment="Stretch"
                         Background="Transparent"
                         Click="ButtonOnClick" 
-						Command="{Binding GoDashBoard}"
+						Command="{Binding GoSettings}"
                         IsChecked="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"
                         Content="{Binding Content, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"/>
                 </ControlTemplate>

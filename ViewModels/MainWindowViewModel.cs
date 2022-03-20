@@ -35,6 +35,9 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
         // he command that navigates to CCTV view 
         public ReactiveCommand<Unit, IRoutableViewModel> GoCcTv { get; }
 
+        // he command that navigates to settings view 
+        public ReactiveCommand<Unit, IRoutableViewModel> GoSettings { get; }
+
         public MainWindowViewModel(StyleManager styles)
         {
             ChangeTheme = ReactiveCommand.Create(() => styles.UseTheme(styles.CurrentTheme switch
@@ -55,6 +58,7 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
             Locator.CurrentMutable.Register(() => new Communication(), typeof(IViewFor<CommunicationViewModel>));
             Locator.CurrentMutable.Register(() => new Security(), typeof(IViewFor<SecurityViewModel>));
             Locator.CurrentMutable.Register(() => new CcTv(), typeof(IViewFor<CcTvViewModel>));
+            Locator.CurrentMutable.Register(() => new Settings(), typeof(IViewFor<SettingsViewModel>));
 
             GoDashBoard = ReactiveCommand.CreateFromObservable(() => 
                 Router.Navigate.Execute(new DashBoardViewModel(this)));
@@ -76,6 +80,9 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
 
             GoCcTv = ReactiveCommand.CreateFromObservable(() => 
                 Router.Navigate.Execute(new CcTvViewModel(this)));
+
+            GoSettings = ReactiveCommand.CreateFromObservable(() => 
+                Router.Navigate.Execute(new SettingsViewModel(this)));
         }
     }
 }
