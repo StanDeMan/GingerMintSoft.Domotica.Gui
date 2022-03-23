@@ -51,20 +51,20 @@
 					Margin="8,12"
 					Classes="vtrx" 
 					Click="FullScreenOnClick" 
-					IsChecked="{Binding Path=vtrx.zoom}" 
+					IsChecked="{Binding Path=vtrx.muted}" 
 					ToolTip.Tip="Fullscreem Mode">
                     <Panel>
                         <DrawingPresenter 
 							Width="18"
 							Height="18"
 							Margin="1,1"
-							Drawing="{DynamicResource zoom}" 
+							Drawing="{DynamicResource Icon.Speaker}" 
 							Classes="tbunchecked"/>
                         <DrawingPresenter 
 							Width="18"
 							Height="18"
 							Margin="1,1" 
-							Drawing="{DynamicResource minimize}" 
+							Drawing="{DynamicResource Icon.SpeakerMute}" 
 							Classes="tbchecked"/>
                     </Panel>
                 </ToggleButton>                

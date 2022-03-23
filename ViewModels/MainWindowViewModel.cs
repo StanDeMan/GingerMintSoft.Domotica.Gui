@@ -11,7 +11,7 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
     public sealed class MainWindowViewModel : ReactiveObject, IScreen
     {
         public ReactiveCommand<Unit, Unit> ChangeTheme { get; }
-        public string Greeting => "Welcome to Domotica.Gui!";
+        public static string Greeting => "Welcome to Domotica.Gui!";
         public RoutingState Router { get; } = new RoutingState();
 
         // The command that navigates to the dash board
