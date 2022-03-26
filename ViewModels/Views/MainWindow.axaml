@@ -43,35 +43,13 @@
 		<StackPanel 
 			Grid.Row="0"
 			HorizontalAlignment="Right">
-            <Border
-                Background="Transparent">
-                <ToggleButton 
-					Width="24"
-					Height="24"
-					Margin="8,12"
-					Classes="vtrx" 
-					Click="FullScreenOnClick" 
-					IsChecked="{Binding Path=vtrx.muted}" 
-					ToolTip.Tip="Fullscreem Mode">
-                    <Panel>
-                        <DrawingPresenter 
-							Width="18"
-							Height="18"
-							Margin="1,1"
-							Drawing="{DynamicResource Icon.Speaker}" 
-							Classes="tbunchecked"/>
-                        <DrawingPresenter 
-							Width="18"
-							Height="18"
-							Margin="1,1" 
-							Drawing="{DynamicResource Icon.SpeakerMute}" 
-							Classes="tbchecked"/>
-                    </Panel>
-                </ToggleButton>                
-            </Border>
+            <controls:ToggelButton 
+				Margin="8,12">
+			</controls:ToggelButton>
         </StackPanel>
     </Grid>
 </Window>
 <!--
 <Button Content="Change Theme" Command="{Binding ChangeTheme}" />
+Click="FullScreenOnClick"
 -->

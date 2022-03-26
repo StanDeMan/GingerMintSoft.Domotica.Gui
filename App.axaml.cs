@@ -19,7 +19,7 @@ namespace GingerMintSoft.Domotica.Gui
             if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
             {
                 var window = new MainWindow();
-                window.DataContext = new MainWindowViewModel(new StyleManager(window));
+                window.DataContext = new MainWindowViewModel(window);
                 desktop.MainWindow = window;
             }
 

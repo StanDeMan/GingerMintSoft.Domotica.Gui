@@ -38,9 +38,11 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
         // he command that navigates to settings view 
         public ReactiveCommand<Unit, IRoutableViewModel> GoSettings { get; }
 
-        public MainWindowViewModel(StyleManager styles)
+        public MainWindowViewModel(MainWindow window)
         {
-            ChangeTheme = ReactiveCommand.Create(() => styles.UseTheme(styles.CurrentTheme switch
+            StyleManager? styles = new(window);
+
+            ChangeTheme = ReactiveCommand.Create(() => styles.UseTheme(theme: styles.CurrentTheme switch
             {
                 StyleManager.Theme.Heima => StyleManager.Theme.Citrus,
                 StyleManager.Theme.Citrus => StyleManager.Theme.Sea,
@@ -48,7 +50,7 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
                 StyleManager.Theme.Rust => StyleManager.Theme.Candy,
                 StyleManager.Theme.Candy => StyleManager.Theme.Magma,
                 StyleManager.Theme.Magma => StyleManager.Theme.Heima,
-                _ => throw new ArgumentOutOfRangeException(nameof(styles.CurrentTheme))
+                _ => throw new ArgumentException(nameof(styles.CurrentTheme))
             }));
 
             Locator.CurrentMutable.Register(() => new DashBoard(), typeof(IViewFor<DashBoardViewModel>));
