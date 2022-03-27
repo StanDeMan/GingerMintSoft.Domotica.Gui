@@ -8,7 +8,8 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels.Views
 {
     public class MainWindow : ReactiveWindow<MainWindowViewModel>
     {
-        private bool _fullScreen;
+        private WindowState _oldWindowSize = WindowState.Maximized;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -24,11 +25,12 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels.Views
 
         public void FullScreenOnClick(object sender, RoutedEventArgs e)
         {
-            WindowState = _fullScreen 
-                ? WindowState.Maximized 
-                : WindowState.FullScreen;
+            if(WindowState != WindowState.FullScreen)
+                _oldWindowSize = WindowState;
 
-            _fullScreen = !_fullScreen;
+            WindowState = WindowState != WindowState.FullScreen
+                ? WindowState.FullScreen 
+                : _oldWindowSize;        
         }
     }
 }
