@@ -15,35 +15,28 @@
 		WindowState="Maximized"
 		WindowStartupLocation="CenterScreen"
 		Background="#545454"
-        ShowInTaskbar="True">
-	<Window.Styles>
-        <Style Selector="ToggleButton DrawingPresenter.tbchecked">
-            <Setter Property="IsVisible" Value="false"/>
-        </Style>
-        <Style Selector="ToggleButton:checked DrawingPresenter.tbchecked">
-            <Setter Property="IsVisible" Value="true"/>
-        </Style>
-        <Style Selector="ToggleButton DrawingPresenter.tbunchecked">
-            <Setter Property="IsVisible" Value="true"/>
-        </Style>
-        <Style Selector="ToggleButton:checked DrawingPresenter.tbunchecked">
-            <Setter Property="IsVisible" Value="false"/>
-        </Style>	
-	</Window.Styles>
+        ShowInTaskbar="True">	
     <Grid RowDefinitions="50, 6*, 120">
-        <StackPanel Grid.Row="0">
-            <controls:HeaderPanel Height="50"/>
+        <StackPanel 
+			Grid.Row="0">
+            <controls:HeaderPanel 
+				Height="50"/>
         </StackPanel>
-        <rxui:RoutedViewHost Grid.Row="1" Router="{Binding Router}">
+        <rxui:RoutedViewHost 
+			Grid.Row="1" 
+			Router="{Binding Router}">
             <rxui:RoutedViewHost.DefaultContent>
                 <views:DashBoard/>
             </rxui:RoutedViewHost.DefaultContent>
         </rxui:RoutedViewHost>
-        <controls:NavigationPanel Grid.Row="2"/>
+        <controls:NavigationPanel 
+			Grid.Row="2"/>
 		<StackPanel 
 			Grid.Row="0"
 			HorizontalAlignment="Right">
-            <controls:MinMaxToggelButton Margin="8,12" Tapped="FullScreenOnClick">
+            <controls:MinMaxToggelButton 
+				Margin="8,12" 
+				Tapped="FullScreenOnClick">
 			</controls:MinMaxToggelButton>
         </StackPanel>
     </Grid>

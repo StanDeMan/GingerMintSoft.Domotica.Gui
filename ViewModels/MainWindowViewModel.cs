@@ -15,28 +15,28 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
         public RoutingState Router { get; } = new RoutingState();
 
         // The command that navigates to the dash board
-        public ReactiveCommand<Unit, IRoutableViewModel> GoDashBoard { get; }
+        public ReactiveCommand<Unit, IRoutableViewModel> NavigateToDashBoard { get; }
 
         // The command that navigates to appliances view
-        public ReactiveCommand<Unit, IRoutableViewModel> GoAppliances { get; }
+        public ReactiveCommand<Unit, IRoutableViewModel> NavigateToAppliances { get; }
 
         // he command that navigates to air condition view 
-        public ReactiveCommand<Unit, IRoutableViewModel> GoAirCondition { get; }
+        public ReactiveCommand<Unit, IRoutableViewModel> NavigateToAirCondition { get; }
 
          // he command that navigates to lighting view 
-        public ReactiveCommand<Unit, IRoutableViewModel> GoLighting { get; }
+        public ReactiveCommand<Unit, IRoutableViewModel> NavigateToLighting { get; }
 
         // he command that navigates to communication view 
-        public ReactiveCommand<Unit, IRoutableViewModel> GoCommunication { get; }
+        public ReactiveCommand<Unit, IRoutableViewModel> NavigateToCommunication { get; }
 
         // he command that navigates to security view 
-        public ReactiveCommand<Unit, IRoutableViewModel> GoSecurity { get; }
+        public ReactiveCommand<Unit, IRoutableViewModel> NavigateToSecurity { get; }
 
         // he command that navigates to CCTV view 
-        public ReactiveCommand<Unit, IRoutableViewModel> GoCcTv { get; }
+        public ReactiveCommand<Unit, IRoutableViewModel> NavigateToCcTv { get; }
 
         // he command that navigates to settings view 
-        public ReactiveCommand<Unit, IRoutableViewModel> GoSettings { get; }
+        public ReactiveCommand<Unit, IRoutableViewModel> NavigateToSettings { get; }
 
         public MainWindowViewModel(MainWindow window)
         {
@@ -62,28 +62,28 @@ namespace GingerMintSoft.Domotica.Gui.ViewModels
             Locator.CurrentMutable.Register(() => new CcTv(), typeof(IViewFor<CcTvViewModel>));
             Locator.CurrentMutable.Register(() => new Settings(), typeof(IViewFor<SettingsViewModel>));
 
-            GoDashBoard = ReactiveCommand.CreateFromObservable(() => 
+            NavigateToDashBoard = ReactiveCommand.CreateFromObservable(() => 
                 Router.Navigate.Execute(new DashBoardViewModel(this)));
 
-            GoAirCondition = ReactiveCommand.CreateFromObservable(() => 
+            NavigateToAirCondition = ReactiveCommand.CreateFromObservable(() => 
                 Router.Navigate.Execute(new AirConditionViewModel(this)));
 
-            GoLighting = ReactiveCommand.CreateFromObservable(() => 
+            NavigateToLighting = ReactiveCommand.CreateFromObservable(() => 
                 Router.Navigate.Execute(new LightingViewModel(this)));
 
-            GoAppliances = ReactiveCommand.CreateFromObservable(() => 
+            NavigateToAppliances = ReactiveCommand.CreateFromObservable(() => 
                 Router.Navigate.Execute(new AppliancesViewModel(this)));
 
-            GoCommunication = ReactiveCommand.CreateFromObservable(() => 
+            NavigateToCommunication = ReactiveCommand.CreateFromObservable(() => 
                 Router.Navigate.Execute(new CommunicationViewModel(this)));
 
-            GoSecurity = ReactiveCommand.CreateFromObservable(() => 
+            NavigateToSecurity = ReactiveCommand.CreateFromObservable(() => 
                 Router.Navigate.Execute(new SecurityViewModel(this)));
 
-            GoCcTv = ReactiveCommand.CreateFromObservable(() => 
+            NavigateToCcTv = ReactiveCommand.CreateFromObservable(() => 
                 Router.Navigate.Execute(new CcTvViewModel(this)));
 
-            GoSettings = ReactiveCommand.CreateFromObservable(() => 
+            NavigateToSettings = ReactiveCommand.CreateFromObservable(() => 
                 Router.Navigate.Execute(new SettingsViewModel(this)));
         }
     }
