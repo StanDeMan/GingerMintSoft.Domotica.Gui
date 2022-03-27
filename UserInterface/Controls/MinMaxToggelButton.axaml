@@ -6,14 +6,12 @@
              mc:Ignorable="d" 
 			 d:DesignWidth="24" 
 			 d:DesignHeight="24"
-             x:Class="GingerMintSoft.Domotica.Gui.UserInterface.Controls.ToggelButton">
+             x:Class="GingerMintSoft.Domotica.Gui.UserInterface.Controls.MinMaxToggelButton">
 	<Border
         Background="Transparent">
         <ToggleButton
-			x:Name="ToggleButtonMinMax"
 			Width="24"
 			Height="24"
-			Click="ButtonOnClick"
 			IsChecked="False">
 			<ToggleButton.Styles>
 				<Style Selector="ToggleButton DrawingPresenter.tbchecked">
