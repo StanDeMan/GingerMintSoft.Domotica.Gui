@@ -43,8 +43,7 @@
 		<StackPanel 
 			Grid.Row="0"
 			HorizontalAlignment="Right">
-            <controls:ToggelButton 
-				Margin="8,12">
+            <controls:ToggelButton Margin="8,12">
 			</controls:ToggelButton>
         </StackPanel>
     </Grid>

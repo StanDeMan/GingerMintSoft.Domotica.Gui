@@ -11,22 +11,14 @@
     <AvaloniaResource Remove="Assets\domotica-iot_32.png" />
     <AvaloniaResource Remove="Assets\domotica-iot_48.png" />
     <AvaloniaResource Remove="Assets\domotica-iot_64.png" />
-    <AvaloniaResource Remove="Assets\Icons.xaml" />
     <None Remove=".gitignore" />
     <None Remove="Assets\domotica-iot_16.png" />
     <None Remove="Assets\domotica-iot_32.png" />
     <None Remove="Assets\domotica-iot_48.png" />
     <None Remove="Assets\domotica-iot_64.png" />
-    <None Remove="Assets\Icons.xaml" />
     <None Remove="Assets\minimize.png" />
     <None Remove="Assets\resize.png" />
     <None Remove="Assets\zoom.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <AvaloniaXaml Include="Assets\Icons.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </AvaloniaXaml>
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Avalonia" Version="0.10.13" />
