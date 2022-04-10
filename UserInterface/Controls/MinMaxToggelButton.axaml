@@ -1,59 +1,33 @@
-<UserControl xmlns="https://github.com/avaloniaui"
-             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-			 xmlns:icons="using:Material.Icons.Avalonia"
-             mc:Ignorable="d" 
-			 d:DesignWidth="24" 
-			 d:DesignHeight="24"
-             x:Class="GingerMintSoft.Domotica.Gui.UserInterface.Controls.MinMaxToggelButton">
+<UserControl 
+	xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:icons="using:Material.Icons.Avalonia"
+    mc:Ignorable="d" 
+	d:DesignWidth="24" 
+	d:DesignHeight="24"
+    x:Class="GingerMintSoft.Domotica.Gui.UserInterface.Controls.MinMaxToggelButton">
 	<Border
         Background="Transparent">
         <ToggleButton
 			Width="24"
 			Height="24"
 			IsChecked="False">
-			<ToggleButton.Styles>
-				<Style Selector="ToggleButton DrawingPresenter.tbchecked">
-					<Setter Property="IsVisible" Value="false"/>
-				</Style>
-				<Style Selector="ToggleButton:checked DrawingPresenter.tbchecked">
-					<Setter Property="IsVisible" Value="true"/>
-				</Style>
-					<Style Selector="ToggleButton DrawingPresenter.tbunchecked">
-					<Setter Property="IsVisible" Value="true"/>
-				</Style>
-					<Style Selector="ToggleButton:checked DrawingPresenter.tbunchecked">
-					<Setter Property="IsVisible" Value="false"/>
-				</Style>
-			</ToggleButton.Styles>
-            <Panel>
-                <DrawingPresenter 
-					Width="18"
-					Height="18"
-					Drawing="{DynamicResource ArrowExpandAll}" 
-					Classes="tbunchecked"/>
-                <DrawingPresenter 
-					Width="18"
-					Height="18"
-					Drawing="{DynamicResource ArrowCollapseAll}" 
-					Classes="tbchecked"/>
-            </Panel>
+			<Button.Template>
+				<ControlTemplate 
+					TargetType="{x:Type ToggleButton}">
+					<Panel>
+						<icons:MaterialIcon 
+							x:Name="ExpandAll"
+							Width="18"
+							Height="18"						 
+							Kind="ArrowExpandAll"/>
+					</Panel>
+				</ControlTemplate>	
+			</Button.Template>	
         </ToggleButton>                
     </Border>
 </UserControl>
-<!--Click="FullScreenOnClick"--> 
-<!--ToolTip.Tip="Fullscreem Mode"-->
-<!--xmlns:icon="using:Material.Icons.Avalonia"-->
-<!--<icons:MaterialIcon 
-	Width="18"
-	Height="18"
-	Classes="tbunchecked"
-	Kind="ArrowExpandAll"/>-->
-<!--<icons:MaterialIcon
-	Width="18"
-	Height="18"
-	Classes="tbchecked"
-	Kind="ArrowCollapseAll"/>-->
 
 
