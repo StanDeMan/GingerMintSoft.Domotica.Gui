@@ -8,26 +8,32 @@
 	d:DesignWidth="24" 
 	d:DesignHeight="24"
     x:Class="GingerMintSoft.Domotica.Gui.UserInterface.Controls.MinMaxToggelButton">
-	<Border
-        Background="Transparent">
-        <ToggleButton
-			Width="24"
-			Height="24"
-			IsChecked="False">
-			<Button.Template>
-				<ControlTemplate 
-					TargetType="{x:Type ToggleButton}">
-					<Panel>
-						<icons:MaterialIcon 
-							x:Name="ExpandAll"
-							Width="18"
-							Height="18"						 
-							Kind="ArrowExpandAll"/>
-					</Panel>
-				</ControlTemplate>	
-			</Button.Template>	
-        </ToggleButton>                
-    </Border>
+	<StackPanel>
+		<Border
+			Background="Transparent">
+			<ToggleButton 
+				Width="24"
+				Height="24"
+				IsChecked="True">
+				<ToggleButton.Template>
+					<ControlTemplate>
+						<Panel>
+							<icons:MaterialIcon
+								Width="20"
+								Height="20"
+								IsVisible="{Binding !IsChecked, RelativeSource={RelativeSource TemplatedParent}}"
+								Kind="ArrowCollapseAll"/>
+							<icons:MaterialIcon 
+								Width="20"
+								Height="20"	
+								IsVisible="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}}"
+								Kind="ArrowExpandAll"/>
+						</Panel>
+					</ControlTemplate>	
+				</ToggleButton.Template>
+			</ToggleButton>  
+		</Border>
+	</StackPanel>
 </UserControl>
 
 
