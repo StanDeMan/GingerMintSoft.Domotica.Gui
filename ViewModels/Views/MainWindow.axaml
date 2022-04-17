@@ -36,7 +36,6 @@
 			HorizontalAlignment="Right">
             <controls:MinMaxToggelButton 
 				Margin="8,12"
-				ToolTip.Tip="Full Screen"
 				Tapped="FullScreenOnClick">
 			</controls:MinMaxToggelButton>
         </StackPanel>
