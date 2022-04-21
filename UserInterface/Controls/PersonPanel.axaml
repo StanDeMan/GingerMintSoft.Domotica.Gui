@@ -16,7 +16,7 @@
 			x:Name="listBoxPersons"
 			Margin="4,4,4,4"
 			VerticalAlignment="Stretch"
-			HorizontalAlignment="Stretch" 
+			HorizontalAlignment="Stretch" 			 
 			ScrollViewer.HorizontalScrollBarVisibility="Auto"
 			ScrollViewer.VerticalScrollBarVisibility="Hidden">
 			<ListBox.ItemsPanel>
@@ -28,6 +28,8 @@
 				<Style Selector="ListBoxItem">
 					<Setter Property="Width" Value="340"/>
 					<Setter Property="Height" Value="140"/>
+					<Setter Property="Background" Value="Transparent" />
+                    <Setter Property="Foreground" Value="Transparent" />
 					<Setter Property="HorizontalAlignment" Value="Left"/>
 				</Style>
 			</ListBox.Styles>
@@ -36,9 +38,9 @@
 					<StackPanel>
 						<Image 
 							Source="{Binding ImagePath, Converter={StaticResource PathToBitmapConverter}}" 
-							Margin="-80,20,0,0" 
-							Height="96" 
-							Width="96" 
+							Margin="-120,20,0,0" 
+							Height="98" 
+							Width="98" 
 							HorizontalAlignment="Center">
 							<Image.Clip>
 								<EllipseGeometry
@@ -48,6 +50,8 @@
 							</Image.Clip>
 						</Image>	
 						<TextBlock 
+							FontSize="22"
+							FontWeight="Bold"
 							Text="{Binding Name}" 
 							Margin="28,-80,-40,0" 
 							Foreground="Black"
