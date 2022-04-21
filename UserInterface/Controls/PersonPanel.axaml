@@ -5,22 +5,53 @@
              mc:Ignorable="d" 
 			 d:DesignWidth="800" 
 			 d:DesignHeight="120"
+			 x:Name="PersonPanel"
              x:Class="GingerMintSoft.Domotica.Gui.UserInterface.Controls.PersonPanel">
-    <TextBlock Grid.Row="0" Text="Person Panel" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-	<!--<ListBox x:Name="myListView">
-        <ListBox.ItemsPanel>
-            <ItemsPanelTemplate>
-                <WrapPanel Orientation="Horizontal"/>
-            </ItemsPanelTemplate>
-        </ListBox.ItemsPanel>
-        <ListBox.ItemTemplate>
-            <DataTemplate>
-                <StackPanel Orientation="Horizontal">
-                    <Button FontSize="10" Foreground="Salmon"
-                            BorderThickness="0" Content="x" Background="Transparent" />
-                    <Label FontSize="10" Foreground="SteelBlue" Width="Auto" Content="{Binding}"/>
-                </StackPanel>
-            </DataTemplate>
-        </ListBox.ItemTemplate>
-    </ListBox>-->
+	<Grid> 
+		<ListBox 
+			x:Name="listBoxPersons"
+			Margin="4,4,4,4"
+			VerticalAlignment="Stretch"
+			HorizontalAlignment="Stretch" 
+			ScrollViewer.HorizontalScrollBarVisibility="Auto"
+			ScrollViewer.VerticalScrollBarVisibility="Hidden">
+			<ListBox.ItemsPanel>
+				<ItemsPanelTemplate>
+					<VirtualizingStackPanel Orientation="Horizontal"/>
+				</ItemsPanelTemplate>
+			</ListBox.ItemsPanel>
+			<ListBox.Styles>
+				<Style Selector="ListBoxItem">
+					<Setter Property="Width" Value="180"/>
+					<Setter Property="Height" Value="120"/>
+					<Setter Property="HorizontalAlignment" Value="Left"/>
+				</Style>
+			</ListBox.Styles>
+			<ListBox.ItemTemplate>
+				<DataTemplate>
+					<StackPanel>
+						<Image 
+							Source="{Binding Image}" 
+							Margin="-80,20,0,0" 
+							Height="48" 
+							Width="48" 
+							HorizontalAlignment="Center" />	
+						<Ellipse 
+							Fill="White" 
+							Opacity="0.15" 
+							Margin="0,-50,80,0" 
+							Height="54" 
+							Width="54" 
+							HorizontalAlignment="Center" 
+							VerticalAlignment="Center" />
+						<TextBlock 
+							Text="{Binding Name}" 
+							Margin="0,-40,-40,0" 
+							Foreground="Black"
+							HorizontalAlignment="Center"/>
+					</StackPanel>
+				</DataTemplate>
+			</ListBox.ItemTemplate>
+		</ListBox>	
+	</Grid>	
 </UserControl>
