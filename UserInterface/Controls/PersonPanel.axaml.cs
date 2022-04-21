@@ -72,7 +72,8 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls
         {
             Add(new Person("Cyndi", "/Assets/cyndi-lauper.jpg"));
             Add(new Person("George", "/Assets/george-clooney.jpg"));
-            Add(new Person("Jeff", "/Assets/george-clooney.jpg"));
+            Add(new Person("Harry", "/Assets/harry.jpg"));
+            Add(new Person("Hermine", "/Assets/hermine.jpg"));
         }
     }
 }
