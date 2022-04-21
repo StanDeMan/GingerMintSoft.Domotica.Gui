@@ -26,7 +26,7 @@
 			</ListBox.ItemsPanel>
 			<ListBox.Styles>
 				<Style Selector="ListBoxItem">
-					<Setter Property="Width" Value="180"/>
+					<Setter Property="Width" Value="240"/>
 					<Setter Property="Height" Value="120"/>
 					<Setter Property="HorizontalAlignment" Value="Left"/>
 				</Style>
@@ -37,20 +37,19 @@
 						<Image 
 							Source="{Binding ImagePath, Converter={StaticResource PathToBitmapConverter}}" 
 							Margin="-80,20,0,0" 
-							Height="48" 
-							Width="48" 
-							HorizontalAlignment="Center" />	
-						<Ellipse 
-							Fill="White" 
-							Opacity="0.15" 
-							Margin="0,-50,80,0" 
-							Height="54" 
-							Width="54" 
-							HorizontalAlignment="Center" 
-							VerticalAlignment="Center" />
+							Height="88" 
+							Width="88" 
+							HorizontalAlignment="Center">
+							<Image.Clip>
+								<EllipseGeometry
+								  RadiusX="40"
+								  RadiusY="40"
+								  Center="44,44"/>
+							</Image.Clip>
+						</Image>	
 						<TextBlock 
 							Text="{Binding Name}" 
-							Margin="0,-40,-40,0" 
+							Margin="28,-80,-40,0" 
 							Foreground="Black"
 							HorizontalAlignment="Center"/>
 					</StackPanel>
