@@ -6,7 +6,11 @@
 			 d:DesignWidth="800" 
 			 d:DesignHeight="120"
 			 x:Name="PersonPanel"
-             x:Class="GingerMintSoft.Domotica.Gui.UserInterface.Controls.PersonPanel">
+             x:Class="GingerMintSoft.Domotica.Gui.UserInterface.Controls.PersonPanel"
+			 xmlns:local="clr-namespace:GingerMintSoft.Domotica.Gui.Converters;assembly=GingerMintSoft.Domotica.Gui">
+	<UserControl.Resources>
+		<local:PathToBitmapConverter x:Key="PathToBitmapConverter"/>
+	</UserControl.Resources>
 	<Grid> 
 		<ListBox 
 			x:Name="listBoxPersons"
@@ -31,7 +35,7 @@
 				<DataTemplate>
 					<StackPanel>
 						<Image 
-							Source="{Binding Image}" 
+							Source="{Binding ImagePath, Converter={StaticResource PathToBitmapConverter}}" 
 							Margin="-80,20,0,0" 
 							Height="48" 
 							Width="48" 

@@ -35,10 +35,10 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls
             Unknown
         }
 
-        public Person(string name, Bitmap image)
+        public Person(string name, string imagePath)
         {
             _name = name;
-            _image = image;
+            _imagePath = imagePath;
         }
 
         private string _name;
@@ -49,12 +49,12 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls
             set { _name = value; }
         }
 
-        private Bitmap _image;
+        private string _imagePath;
 
-        public Bitmap Image
+        public string ImagePath
         {
-            get { return _image; }
-            set { _image = value; }
+            get { return _imagePath; }
+            set { _imagePath = value; }
         }
 
         private EnmPersonState _personState;
@@ -70,15 +70,9 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls
     {
         public Persons()
         {
-            Add(new Person("Cyndi", LoadImage("/GingerMintSoft.Domotica.Gui/Assets/cyndi-lauper.jpg")));
-            Add(new Person("George", LoadImage("/GingerMintSoft.Domotica.Gui/Assets/george-clooney.jpg")));
-            Add(new Person("Jeff", LoadImage("/GingerMintSoft.Domotica.Gui/Assets/george-clooney.jpg")));
-        }
-
-        private Bitmap LoadImage(string path)
-        {
-            return new Bitmap(AvaloniaLocator.Current.GetService<IAssetLoader>()?
-                .Open(new Uri($"avares:/{path}")));
+            Add(new Person("Cyndi", "/Assets/cyndi-lauper.jpg"));
+            Add(new Person("George", "/Assets/george-clooney.jpg"));
+            Add(new Person("Jeff", "/Assets/george-clooney.jpg"));
         }
     }
 }
