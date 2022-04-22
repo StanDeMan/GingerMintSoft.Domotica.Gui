@@ -6,6 +6,7 @@ namespace GingerMintSoft.Domotica.Gui.Extensions
     /// <summary>
     /// This attribute is used to represent a string value for a value in an enum.
     /// </summary>
+    [AttributeUsage(AttributeTargets.All)]
     public class EnumStringValueAttribute : Attribute 
     {
         #region Properties
