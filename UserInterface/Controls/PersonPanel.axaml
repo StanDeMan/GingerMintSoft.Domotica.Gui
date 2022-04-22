@@ -42,14 +42,16 @@
 								Source="/Assets/placeholder.png"
 								Margin="-120,20,0,0"								
 								Height="68" 
-								Width="68" 
+								Width="68"
+								IsVisible="{Binding !IsImagePresent}"
 								HorizontalAlignment="Center">															
 							</Image>
 							<Image 
 								Source="{Binding ImagePath, Converter={StaticResource PathToBitmapConverter}}"
 								Margin="-120,20,0,0" 
 								Height="98" 
-								Width="98" 
+								Width="98"
+								IsVisible="{Binding IsImagePresent}"
 								HorizontalAlignment="Center">
                                 <Image.Clip>
 									<EllipseGeometry
