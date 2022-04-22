@@ -17,7 +17,16 @@ namespace GingerMintSoft.Domotica.Gui.Models
         // TODO: gets calculated later...
         private readonly int _residentialNonPresenceTime = 2;    
 
-        public Person(string name, string imagePath, EnmResidentialState residentialState)
+        /// <summary>
+        /// Person ctor
+        /// </summary>
+        /// <param name="name">Prename of Person</param>
+        /// <param name="imagePath">Path and image name with extension</param>
+        /// <param name="residentialState">EnmResidentialState</param>
+        public Person(
+            string name, 
+            string imagePath = "", 
+            EnmResidentialState residentialState = EnmResidentialState.Unknown)
         {
             _name = name;
             _imagePath = imagePath;
@@ -31,7 +40,7 @@ namespace GingerMintSoft.Domotica.Gui.Models
             set => _name = value; 
         }
 
-        private string _imagePath;
+        private string _imagePath = "";
         public string ImagePath
         {
             get => _imagePath; 
@@ -47,9 +56,7 @@ namespace GingerMintSoft.Domotica.Gui.Models
 
         public bool IsAbsent => _residentialState == EnmResidentialState.Out;
 
-        public bool IsImagePresent => string.IsNullOrEmpty(_imagePath) 
-            ? false 
-            : true;
+        public bool IsImagePresent => !string.IsNullOrEmpty(_imagePath);
 
         public string? ResidentialStateNotification => _residentialState.GetStringValue() 
             ?? EnmResidentialState.Unknown.GetStringValue();
