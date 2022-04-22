@@ -50,8 +50,7 @@
 							</Image.Clip>
 						</Image>	
 						<TextBlock 
-							FontSize="22"
-							FontWeight="Bold"
+							FontSize="24"
 							Text="{Binding Name}" 
 							Margin="28,-80,-40,0" 
 							Foreground="Black"
