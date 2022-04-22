@@ -53,8 +53,23 @@
 								HorizontalAlignment="Center">
                                 <Image.Clip>
 									<EllipseGeometry
-									  RadiusX="44"
-									  RadiusY="44"	
+									  RadiusX="47"
+									  RadiusY="47"	
+									  Center="48,48"/>
+								</Image.Clip>							
+							</Image>
+							<Image 
+								Source="/Assets/disable.png"
+								Margin="-120,20,0,0" 
+								Height="98" 
+								Width="98"
+								Opacity="90"
+								IsVisible="{Binding IsAbsent}"
+								HorizontalAlignment="Center">
+                                <Image.Clip>
+									<EllipseGeometry
+									  RadiusX="47"
+									  RadiusY="47"	
 									  Center="48,48"/>
 								</Image.Clip>							
 							</Image>
