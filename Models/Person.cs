@@ -1,24 +1,27 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using GingerMintSoft.Domotica.Gui.Extensions;
 
 namespace GingerMintSoft.Domotica.Gui.Models
 {
     public class Person
     {
-        public enum EnmPersonState
+        public enum EnmResidentialState
         {
+            [EnumStringValue("IN")]
             In = 0,
+            [EnumStringValue("OUT")]
             Out,
+            [EnumStringValue("UNKNOWN")]
             Unknown
         }
 
-        public Person(string name, string imagePath)
+        // gets calculated later...
+        int _residentialNonPresentTime = 2;
+
+        public Person(string name, string imagePath, EnmResidentialState residentialState)
         {
             _name = name;
             _imagePath = imagePath;
+            _residentialState = residentialState;
         }
 
         private string _name;
@@ -37,12 +40,26 @@ namespace GingerMintSoft.Domotica.Gui.Models
             set { _imagePath = value; }
         }
 
-        private EnmPersonState _personState;
+        private EnmResidentialState _residentialState;
 
-        public EnmPersonState PersonState
+        public EnmResidentialState ResidentialState
         {
-            get { return _personState; } 
-            set { _personState = value; }
+            get { return _residentialState; } 
+            set { _residentialState = value; }
         }
+
+        public string? ResidentialStateNotification => _residentialState.GetStringValue() 
+            ?? EnmResidentialState.Unknown.GetStringValue();
+
+        public string? ResidentialStateNonPresentNotification
+        {
+            get 
+            {
+                return _residentialState == EnmResidentialState.Out 
+                    ? $"For {_residentialNonPresentTime} h now" : 
+                    string.Empty;
+            }
+        }
+
     }
 }
