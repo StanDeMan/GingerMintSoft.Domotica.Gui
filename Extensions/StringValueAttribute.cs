@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Reflection;
 
 namespace GingerMintSoft.Domotica.Gui.Extensions
 {
@@ -12,7 +11,7 @@ namespace GingerMintSoft.Domotica.Gui.Extensions
         #region Properties
 
         /// <summary>
-        /// Holds the stringvalue for a value in an enum.
+        /// Holds the StringValue for a value in an enum.
         /// </summary>
         public string EnumStringValue { get; protected set; }
 
@@ -44,13 +43,13 @@ namespace GingerMintSoft.Domotica.Gui.Extensions
         public static string? GetStringValue(this Enum value) 
         {
             // Get the type
-            Type type = value.GetType();
+            var type = value.GetType();
 
-            // Get fieldinfo for this type
-            FieldInfo? fieldInfo = type.GetField(value.ToString());
+            // Get FieldInfo for this type
+            var fieldInfo = type.GetField(value.ToString());
 
-            // Get the stringvalue attributes
-            EnumStringValueAttribute[]? attribs = fieldInfo?
+            // Get the StringValue attributes
+            var attribs = fieldInfo?
                 .GetCustomAttributes(typeof(EnumStringValueAttribute), false) as EnumStringValueAttribute[];
 
             // Return the first if there was a match.
