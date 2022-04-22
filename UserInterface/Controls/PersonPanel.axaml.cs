@@ -31,11 +31,11 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls
     {
         public Persons()
         {
-            Add(new Person("Cyndi", "/Assets/cyndi-lauper.jpg"));
-            Add(new Person("George", "/Assets/george-clooney.jpg"));
-            Add(new Person("Harry", "/Assets/harry.jpg"));
-            Add(new Person("Hermine", "/Assets/hermine.jpg"));
-            Add(new Person("Ron", "/Assets/ron.jpg"));
+            Add(new Person("Cyndi", "/Assets/cyndi-lauper.jpg", Person.EnmResidentialState.In));
+            Add(new Person("George", "/Assets/george-clooney.jpg", Person.EnmResidentialState.In));
+            Add(new Person("Harry", "/Assets/harry.jpg", Person.EnmResidentialState.In));
+            Add(new Person("Hermine", "/Assets/hermine.jpg", Person.EnmResidentialState.Out));
+            Add(new Person("Ron", "/Assets/ron.jpg", Person.EnmResidentialState.Out));
         }
     }
 }

@@ -6,6 +6,7 @@
 			 d:DesignWidth="1440" 
 			 d:DesignHeight="160"
 			 x:Name="PersonPanel"
+			 xmlns:icons="using:Material.Icons.Avalonia"
              x:Class="GingerMintSoft.Domotica.Gui.UserInterface.Controls.PersonPanel"
 			 xmlns:local="clr-namespace:GingerMintSoft.Domotica.Gui.Converters;assembly=GingerMintSoft.Domotica.Gui">
 	<UserControl.Resources>
@@ -52,12 +53,35 @@
 						<TextBlock 
 							FontSize="24"
 							Text="{Binding Name}" 
-							Margin="28,-80,-40,0" 
+							Margin="180,-90,0,0" 
 							Foreground="Black"
-							HorizontalAlignment="Center"/>
+							HorizontalAlignment="Left"/>
+						<TextBlock 
+							FontSize="28"
+							FontWeight="Bold"
+							Text="{Binding ResidentialStateNotification}" 
+							Margin="180,-64,0,0" 
+							Foreground="#01EBC2"
+							HorizontalAlignment="Left"/>
+						<TextBlock 
+							FontSize="16"
+							Text="{Binding ResidentialStateNonPresentNotification}" 
+							Margin="180,-28,0,0" 
+							Foreground="Silver"
+							HorizontalAlignment="Left"/>
 					</StackPanel>
 				</DataTemplate>
 			</ListBox.ItemTemplate>
-		</ListBox>	
+		</ListBox>
+		<Button 
+			Width="42"
+			Height="42" 
+			Margin="0,0,60,0"
+			HorizontalAlignment="Right">
+				<icons:MaterialIcon
+					Width="28"
+					Height="28"
+					Kind="Plus"/>
+		</Button>
 	</Grid>	
 </UserControl>
