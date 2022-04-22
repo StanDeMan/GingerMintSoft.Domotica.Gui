@@ -1,23 +1,17 @@
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
-using Avalonia.Platform;
-using System;
-using System.Drawing;
-using System.Collections.Generic;
 using System.Collections.ObjectModel;
-using System.Collections.Specialized;
 using GingerMintSoft.Domotica.Gui.Models;
 
 namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls
 {
-    public partial class PersonPanel : UserControl
+    public class PersonPanel : UserControl
     {
         public PersonPanel()
         {
             InitializeComponent();
 
-            var listBoxPersons = this.FindControl<ListBox>("listBoxPersons");
+            var listBoxPersons = this.FindControl<ListBox>("ListBoxPersons");
             listBoxPersons.Items = new Persons();
         }
 

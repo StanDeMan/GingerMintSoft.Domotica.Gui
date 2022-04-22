@@ -12,9 +12,9 @@
 	<UserControl.Resources>
 		<local:PathToBitmapConverter x:Key="PathToBitmapConverter"/>
 	</UserControl.Resources>
-	<Grid> 
+    <Grid> 
 		<ListBox 
-			x:Name="listBoxPersons"
+			x:Name="ListBoxPersons"
 			Margin="4,4,4,4"
 			VerticalAlignment="Stretch"
 			HorizontalAlignment="Stretch" 			 
@@ -40,9 +40,9 @@
 						<Grid>
 							<Image 
 								Source="/Assets/placeholder.png"
-								Margin="-120,20,0,0" 
-								Height="64" 
-								Width="64" 
+								Margin="-120,20,0,0"								
+								Height="68" 
+								Width="68" 
 								HorizontalAlignment="Center">															
 							</Image>
 							<Image 
@@ -51,10 +51,10 @@
 								Height="98" 
 								Width="98" 
 								HorizontalAlignment="Center">
-								<Image.Clip>
+                                <Image.Clip>
 									<EllipseGeometry
 									  RadiusX="44"
-									  RadiusY="44"
+									  RadiusY="44"	
 									  Center="48,48"/>
 								</Image.Clip>							
 							</Image>
