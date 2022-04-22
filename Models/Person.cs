@@ -40,15 +40,15 @@ namespace GingerMintSoft.Domotica.Gui.Models
             set => _name = value; 
         }
 
-        private string _imagePath = "";
+        private string _imagePath;
         public string ImagePath
         {
             get => _imagePath; 
             set => _imagePath = value; 
         }
 
-        private EnmResidentialState _residentialState = EnmResidentialState.Unknown;
-        public EnmResidentialState ResidentialState 
+        private EnmResidentialState _residentialState;
+        public EnmResidentialState ResidentialState
         {
             get => _residentialState;  
             set => _residentialState = value; 
