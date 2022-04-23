@@ -3,7 +3,7 @@ using GingerMintSoft.Domotica.Gui.Extensions;
 
 namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
 {
-    public class Resident : Person, INotifyPropertyChanged
+    public class Resident : INotifyPropertyChanged
     {
         public enum EnmResidentialState
         {
@@ -19,38 +19,54 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
         private readonly int _residentialNonPresenceTime = 2;
 
         public Resident(
-            string name, 
+            string firstName = "",
+            string lastName = "", 
             string imagePath = "", 
-            EnmResidentialState state = EnmResidentialState.Unknown) : base(name, imagePath)
+            EnmResidentialState state = EnmResidentialState.Unknown)
         {
-            Name = name;    
-            ImagePath = imagePath;  
+            _firstName = firstName;
+            _imagePath = imagePath;
+            _lastName = lastName;
             ResidentialState = state;
         }
 
+        private string _firstName;
         public string FirstName
         {
-            get => Name;
+            get => _firstName;
             set 
             { 
-                Name = value; 
+                _firstName = value; 
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(FirstName)));
             }
         }
 
-        public string ImagePathAndName
+        private string _lastName;
+        public string LastName
         {
-            get => ImagePath;
+            get => _lastName;
             set 
             { 
-                ImagePath = value; 
+                _lastName = value; 
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(LastName)));
+            }
+        }
+
+        private string _imagePath;
+        public string ImagePath
+        {
+            get => _imagePath;
+            set 
+            { 
+                _imagePath = value; 
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ImagePath)));
 
-                // update dependant
+                // update dependent
                 IsImagePresent = IsImagePresent;
             }        
         }
 
+        // ReSharper disable once NotAccessedField.Local
         private bool _isImagePresent;
         public bool IsImagePresent
         {
@@ -72,13 +88,14 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
                 _residentialState = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ResidentialState)));
 
-                // update dependant
+                // update dependent
                 IsAbsent = IsAbsent;
                 ResidentialStateNotification = ResidentialStateNotification;
                 ResidentialStateOutNotification = ResidentialStateOutNotification;
             }
         }
 
+        // ReSharper disable once NotAccessedField.Local
         private bool _isAbsent;
         public bool IsAbsent
         {
@@ -91,6 +108,7 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
             }
         }
 
+        // ReSharper disable once NotAccessedField.Local
         private string? _residentialStateNotification;
         public string? ResidentialStateNotification
         {
@@ -104,6 +122,7 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
             }
         }
 
+        // ReSharper disable once NotAccessedField.Local
         private string? _residentialStateOutNotification;
         public string? ResidentialStateOutNotification
         {
