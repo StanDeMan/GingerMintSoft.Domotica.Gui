@@ -1,10 +1,9 @@
-using Avalonia;
 using Avalonia.Controls;
 using Avalonia.Markup.Xaml;
 
-namespace GingerMintSoft.Domotica.Gui.UserInterface.UserControls
+namespace GingerMintSoft.Domotica.Gui.UserInterface.InternalControls.Views
 {
-    public partial class NavigationToggleButtonControl : UserControl
+    public class NavigationToggleButtonControl : UserControl
     {
         public NavigationToggleButtonControl()
         {

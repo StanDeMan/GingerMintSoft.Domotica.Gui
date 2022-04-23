@@ -5,7 +5,7 @@
              mc:Ignorable="d" 
 			 d:DesignWidth="160" 
 			 d:DesignHeight="120"
-             x:Class="GingerMintSoft.Domotica.Gui.UserInterface.UserControls.NavigationToggleButtonControl"
+             x:Class="GingerMintSoft.Domotica.Gui.UserInterface.InternalControls.Views.NavigationToggleButtonControl"
 			 DataContext="{Binding RelativeSource={RelativeSource Self}}">
     <RadioButton 
 	    IsChecked="{Binding IsSelected}">
