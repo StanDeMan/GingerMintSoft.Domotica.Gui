@@ -3,12 +3,12 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:sg="clr-namespace:AvaloniaSpacedGrid;assembly=AvaloniaSpacedGrid"
-             Name="DashBoard"
+             Name="Appliances"
              mc:Ignorable="d" 
              d:DesignWidth="800" 
              d:DesignHeight="450"
              x:Class="GingerMintSoft.Domotica.Gui.Main.Views.Appliances">
-    <sg:SpacedGrid Name="SpacedGrid" RowSpacing="1" ColumnSpacing="1">
+	<sg:SpacedGrid Name="SpacedGrid" RowSpacing="1" ColumnSpacing="1">
         <sg:SpacedGrid.RowDefinitions>
             <RowDefinition />
             <RowDefinition />
