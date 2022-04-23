@@ -19,22 +19,22 @@ namespace GingerMintSoft.Domotica.Gui.Main.ViewModels
         // The command that navigates to appliances view
         public ReactiveCommand<Unit, IRoutableViewModel> NavigateToAppliances { get; }
 
-        // he command that navigates to air condition view 
+        // The command that navigates to air condition view 
         public ReactiveCommand<Unit, IRoutableViewModel> NavigateToAirCondition { get; }
 
-        // he command that navigates to lighting view 
+        // The command that navigates to lighting view 
         public ReactiveCommand<Unit, IRoutableViewModel> NavigateToLighting { get; }
 
-        // he command that navigates to communication view 
+        // The command that navigates to communication view 
         public ReactiveCommand<Unit, IRoutableViewModel> NavigateToCommunication { get; }
 
-        // he command that navigates to security view 
+        // The command that navigates to security view 
         public ReactiveCommand<Unit, IRoutableViewModel> NavigateToSecurity { get; }
 
-        // he command that navigates to CCTV view 
+        // The command that navigates to CCTV view 
         public ReactiveCommand<Unit, IRoutableViewModel> NavigateToCcTv { get; }
 
-        // he command that navigates to settings view 
+        // The command that navigates to settings view 
         public ReactiveCommand<Unit, IRoutableViewModel> NavigateToSettings { get; }
 
         public MainWindowViewModel(MainWindow window)
