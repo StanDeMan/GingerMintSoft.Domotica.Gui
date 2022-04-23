@@ -18,6 +18,13 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
         // TODO: gets calculated later...
         private readonly int _residentialNonPresenceTime = 2;
 
+        /// <summary>
+        /// Residential person with some state
+        /// </summary>
+        /// <param name="firstName">Person first name</param>
+        /// <param name="lastName">Person Lastname</param>
+        /// <param name="imagePath">Person image with path and file</param>
+        /// <param name="state">Residential state: In, Out, etc.</param>
         public Resident(
             string firstName = "",
             string lastName = "", 
@@ -30,6 +37,9 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
             ResidentialState = state;
         }
 
+        /// <summary>
+        //  Person Firstname
+        /// </summary>
         private string _firstName;
         public string FirstName
         {
@@ -42,6 +52,9 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
             }
         }
 
+        /// <summary>
+        /// Person Lastname
+        /// </summary>
         private string _lastName;
         public string LastName
         {
@@ -54,6 +67,9 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
             }
         }
 
+        /// <summary>
+        /// Person image with related path
+        /// </summary>
         private string _imagePath;
         public string ImagePath
         {
@@ -69,6 +85,9 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
             }        
         }
 
+        /// <summary>
+        /// Check if person image present
+        /// </summary>
         // ReSharper disable once NotAccessedField.Local
         private bool _isImagePresent;
         public bool IsImagePresent
@@ -82,6 +101,9 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
             }
         }
 
+        /// <summary>
+        /// Person residential state: in, out, etc.
+        /// </summary>
         private EnmResidentialState _residentialState;
         public EnmResidentialState ResidentialState
         {
@@ -99,6 +121,9 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
             }
         }
 
+        /// <summary>
+        /// Check if person is out of residence
+        /// </summary>
         // ReSharper disable once NotAccessedField.Local
         private bool _isOut;
         public bool IsOut
@@ -112,6 +137,9 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
             }
         }
 
+        /// <summary>
+        /// Person state notification as text: "In", "Out"
+        /// </summary>
         // ReSharper disable once NotAccessedField.Local
         private string? _residentialStateNotification;
         public string? ResidentialStateNotification
@@ -126,6 +154,9 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
             }
         }
 
+        /// <summary>
+        /// Persons absence in half hour parts
+        /// </summary>
         // ReSharper disable once NotAccessedField.Local
         private string? _residentialStateOutNotification;
         public string? ResidentialStateOutNotification
