@@ -81,7 +81,7 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ImagePath)));
 
                 // update dependent
-                IsImagePresent = IsImagePresent;
+                IsImagePresent = CheckIsImagePresent();
             }        
         }
 
@@ -91,7 +91,7 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
         // ReSharper disable once NotAccessedField.Local
         public bool IsImagePresent
         {
-            get => !string.IsNullOrEmpty(ImagePath);
+            get => CheckIsImagePresent();
 
             set 
             { 
@@ -113,9 +113,9 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ResidentialState)));
 
                 // update dependent
-                IsOut = IsOut;
-                ResidentialStateNotification = ResidentialStateNotification;
-                ResidentialStateOutNotification = ResidentialStateOutNotification;
+                IsOut = CheckIsOut();
+                ResidentialStateNotification = CheckResidentialStateNotification();
+                ResidentialStateOutNotification = CheckResidentialStateOutNotification();
             }
         }
 
@@ -123,14 +123,12 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
         /// Check if person is out of residence
         /// </summary>
         // ReSharper disable once NotAccessedField.Local
-        private bool _isOut;
         public bool IsOut
         {
-            get => ResidentialState == EnmResidentialState.Out;
+            get => CheckIsOut();
 
             set
             {
-                _isOut = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsOut)));
             }
         }
@@ -141,8 +139,7 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
         // ReSharper disable once NotAccessedField.Local
         public string? ResidentialStateNotification
         {
-            get => ResidentialState.GetStringValue() 
-                ?? EnmResidentialState.Unknown.GetStringValue();
+            get => CheckResidentialStateNotification();
 
             set
             { 
@@ -156,15 +153,39 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
         // ReSharper disable once NotAccessedField.Local
         public string? ResidentialStateOutNotification
         {
-            get => ResidentialState == EnmResidentialState.Out 
-                ? $"For {_residentialNonPresenceTime} h now"
-                : string.Empty;
+            get => CheckResidentialStateOutNotification();
 
             set
             { 
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ResidentialStateOutNotification)));
             }
         }
+
+        # region Check resident states
+        private bool CheckIsImagePresent()
+        {
+            return !string.IsNullOrEmpty(ImagePath);
+        }
+
+        private bool CheckIsOut()
+        {
+            return ResidentialState == EnmResidentialState.Out;
+        }
+
+        private string? CheckResidentialStateNotification()
+        {
+            return ResidentialState.GetStringValue() 
+                ?? EnmResidentialState.Unknown.GetStringValue();
+        }
+
+        private string? CheckResidentialStateOutNotification()
+        {
+            return ResidentialState == EnmResidentialState.Out 
+                ? $"For {_residentialNonPresenceTime} h now"
+                : string.Empty;
+        }
+
+        #endregion Check resident states
 
         public event PropertyChangedEventHandler? PropertyChanged;
     }
