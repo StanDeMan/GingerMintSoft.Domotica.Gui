@@ -18,6 +18,7 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.ViewModels
 
         public ResidentPanelViewModel()
         {
+            // Fake data MVVM test
             Residents = new ObservableCollection<Resident>
             {
                 new Resident("Cyndi", "Lauper", "/Assets/Images/cyndi-lauper.jpg", Resident.EnmResidentialState.In),
@@ -27,7 +28,6 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.ViewModels
                 new Resident("Ron", "Weasley", "/Assets/Images/ron.jpg", Resident.EnmResidentialState.Out)
             };
 
-            //// Fake data MVVM test
             //var timer = new DispatcherTimer
             //{
             //    Interval = TimeSpan.FromSeconds(5)
