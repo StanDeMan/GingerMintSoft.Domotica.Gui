@@ -1,6 +1,6 @@
 ﻿using GingerMintSoft.Domotica.Gui.Extensions;
 
-namespace GingerMintSoft.Domotica.Gui.Models
+namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
 {
     public class Person
     {
@@ -15,7 +15,7 @@ namespace GingerMintSoft.Domotica.Gui.Models
         }
 
         // TODO: gets calculated later...
-        private readonly int _residentialNonPresenceTime = 2;    
+        private readonly int _residentialNonPresenceTime = 2;
 
         /// <summary>
         /// Person ctor
@@ -24,8 +24,8 @@ namespace GingerMintSoft.Domotica.Gui.Models
         /// <param name="imagePath">Path and image name with extension</param>
         /// <param name="residentialState">EnmResidentialState</param>
         public Person(
-            string name, 
-            string imagePath = "", 
+            string name,
+            string imagePath = "",
             EnmResidentialState residentialState = EnmResidentialState.Unknown)
         {
             _name = name;
@@ -36,32 +36,32 @@ namespace GingerMintSoft.Domotica.Gui.Models
         private string _name;
         public string Name
         {
-            get => _name; 
-            set => _name = value; 
+            get => _name;
+            set => _name = value;
         }
 
         private string _imagePath;
         public string ImagePath
         {
-            get => _imagePath; 
-            set => _imagePath = value; 
+            get => _imagePath;
+            set => _imagePath = value;
         }
 
         private EnmResidentialState _residentialState;
         public EnmResidentialState ResidentialState
         {
-            get => _residentialState;  
-            set => _residentialState = value; 
+            get => _residentialState;
+            set => _residentialState = value;
         }
 
         public bool IsAbsent => _residentialState == EnmResidentialState.Out;
 
         public bool IsImagePresent => !string.IsNullOrEmpty(_imagePath);
 
-        public string? ResidentialStateNotification => _residentialState.GetStringValue() 
+        public string? ResidentialStateNotification => _residentialState.GetStringValue()
             ?? EnmResidentialState.Unknown.GetStringValue();
 
-        public string? ResidentialStateOutNotification => _residentialState == EnmResidentialState.Out 
+        public string? ResidentialStateOutNotification => _residentialState == EnmResidentialState.Out
             ? $"For {_residentialNonPresenceTime} h now"
             : string.Empty;
     }
