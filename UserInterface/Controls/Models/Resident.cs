@@ -89,14 +89,12 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
         /// Check if person image present
         /// </summary>
         // ReSharper disable once NotAccessedField.Local
-        private bool _isImagePresent;
         public bool IsImagePresent
         {
             get => !string.IsNullOrEmpty(ImagePath);
 
             set 
             { 
-                _isImagePresent = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsImagePresent)));
             }
         }
@@ -141,7 +139,6 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
         /// Person state notification as text: "In", "Out"
         /// </summary>
         // ReSharper disable once NotAccessedField.Local
-        private string? _residentialStateNotification;
         public string? ResidentialStateNotification
         {
             get => ResidentialState.GetStringValue() 
@@ -149,7 +146,6 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
 
             set
             { 
-                _residentialStateNotification = value; 
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ResidentialStateNotification)));
             }
         }
@@ -158,7 +154,6 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
         /// Persons absence in half hour parts
         /// </summary>
         // ReSharper disable once NotAccessedField.Local
-        private string? _residentialStateOutNotification;
         public string? ResidentialStateOutNotification
         {
             get => ResidentialState == EnmResidentialState.Out 
@@ -167,7 +162,6 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
 
             set
             { 
-                _residentialStateOutNotification = value; 
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ResidentialStateOutNotification)));
             }
         }
