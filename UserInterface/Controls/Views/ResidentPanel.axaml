@@ -7,18 +7,17 @@
 			 d:DesignHeight="160"
 			 x:Name="PersonPanel"
 			 xmlns:icons="using:Material.Icons.Avalonia"
-             x:Class="GingerMintSoft.Domotica.Gui.UserInterface.Controls.Views.PersonPanel"
+             x:Class="GingerMintSoft.Domotica.Gui.UserInterface.Controls.Views.ResidentPanel"
 			 xmlns:local="clr-namespace:GingerMintSoft.Domotica.Gui.Converters;assembly=GingerMintSoft.Domotica.Gui">
 	<UserControl.Resources>
 		<local:PathToBitmapConverter x:Key="PathToBitmapConverter"/>
 	</UserControl.Resources>
     <Grid> 
 		<ListBox 
-			x:Name="ListBoxPersons"
 			Margin="4,4,4,4"
 			VerticalAlignment="Stretch"
 			HorizontalAlignment="Stretch" 
-			Items="{Binding Persons}"
+			Items="{Binding Residents}"
 			ScrollViewer.HorizontalScrollBarVisibility="Auto"
 			ScrollViewer.VerticalScrollBarVisibility="Hidden">
 			<ListBox.ItemsPanel>
@@ -42,8 +41,8 @@
 							<Image 
 								Source="/Assets/placeholder.png"
 								Margin="-120,20,0,0"								
-								Height="68" 
-								Width="68"
+								Height="98" 
+								Width="98"
 								IsVisible="{Binding !IsImagePresent}"
 								HorizontalAlignment="Center">															
 							</Image>
@@ -79,7 +78,7 @@
 						</Grid>
 						<TextBlock 
 							FontSize="24"
-							Text="{Binding Name}" 
+							Text="{Binding FirstName}" 
 							Margin="180,-90,0,0" 
 							Foreground="Black"
 							HorizontalAlignment="Left"/>

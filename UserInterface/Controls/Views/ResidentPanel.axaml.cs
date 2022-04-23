@@ -6,12 +6,12 @@ using GingerMintSoft.Domotica.Gui.UserInterface.Controls.ViewModels;
 
 namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Views
 {
-    public class PersonPanel : UserControl
+    public class ResidentPanel : UserControl
     {
-        public PersonPanel()
+        public ResidentPanel()
         {
             InitializeComponent();
-            DataContext = new PersonPanelViewModel();
+            DataContext = new ResidentPanelViewModel();
         }
 
         private void InitializeComponent()
