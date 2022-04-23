@@ -43,7 +43,4 @@
       <DependentUpon>ResidentPanel.axaml</DependentUpon>
     </Compile>
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="UserInterface\InternalControls\ViewModels\" />
-  </ItemGroup>
 </Project>

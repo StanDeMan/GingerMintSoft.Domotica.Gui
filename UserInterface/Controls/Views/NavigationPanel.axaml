@@ -3,8 +3,9 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              mc:Ignorable="d" 
-			 d:DesignWidth="1280" 
+			 d:DesignWidth="1480" 
 			 d:DesignHeight="120"
+			 xmlns:controls="clr-namespace:GingerMintSoft.Domotica.Gui.UserInterface.InternalControls.Views"
              x:Class="GingerMintSoft.Domotica.Gui.UserInterface.Controls.Views.NavigationPanel">
 	<!-- This very bad xaml: pretty much copy & paste - it works. Okay! -> rework it soon!!! -->
 	<Grid Background="#494949">    
@@ -14,6 +15,7 @@
             <ColumnDefinition/>  
 			<ColumnDefinition/>  
 			<ColumnDefinition/> 
+			<ColumnDefinition/>
 			<ColumnDefinition/>
 			<ColumnDefinition/>
 			<ColumnDefinition/>
@@ -174,7 +176,11 @@
                         Content="{Binding Content, RelativeSource={RelativeSource TemplatedParent}, Mode=TwoWay}"/>
                 </ControlTemplate>
             </RadioButton.Template>
-        </RadioButton>	
+        </RadioButton>
+		<controls:NavigationToggleButtonControl 
+			Grid.Column="8" Co>
+			
+		</controls:NavigationToggleButtonControl>
     </Grid>    
     <!--<StackPanel Orientation="Horizontal" Background="Transparent">
         
