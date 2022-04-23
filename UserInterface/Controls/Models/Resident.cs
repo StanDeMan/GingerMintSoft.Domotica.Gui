@@ -34,6 +34,7 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
         public string FirstName
         {
             get => _firstName;
+
             set 
             { 
                 _firstName = value; 
@@ -45,6 +46,7 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
         public string LastName
         {
             get => _lastName;
+
             set 
             { 
                 _lastName = value; 
@@ -56,6 +58,7 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
         public string ImagePath
         {
             get => _imagePath;
+
             set 
             { 
                 _imagePath = value; 
@@ -83,28 +86,29 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.Models
         public EnmResidentialState ResidentialState
         {
             get => _residentialState;
+
             set 
             {
                 _residentialState = value;
                 PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(ResidentialState)));
 
                 // update dependent
-                IsAbsent = IsAbsent;
+                IsOut = IsOut;
                 ResidentialStateNotification = ResidentialStateNotification;
                 ResidentialStateOutNotification = ResidentialStateOutNotification;
             }
         }
 
         // ReSharper disable once NotAccessedField.Local
-        private bool _isAbsent;
-        public bool IsAbsent
+        private bool _isOut;
+        public bool IsOut
         {
             get => ResidentialState == EnmResidentialState.Out;
 
             set
             {
-                _isAbsent = value;
-                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsAbsent)));
+                _isOut = value;
+                PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(nameof(IsOut)));
             }
         }
 

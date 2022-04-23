@@ -27,27 +27,27 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.ViewModels
                 new Resident("Ron", "Weasley", "/Assets/Images/ron.jpg", Resident.EnmResidentialState.Out)
             };
 
-            // Fake data MVVM test
-            var timer = new DispatcherTimer
-            {
-                Interval = TimeSpan.FromSeconds(5)
-            };
+            //// Fake data MVVM test
+            //var timer = new DispatcherTimer
+            //{
+            //    Interval = TimeSpan.FromSeconds(5)
+            //};
 
-            timer.Tick += (_, _) =>
-            {
-                var resident = Residents.FirstOrDefault(r => r.FirstName == "Ron");
-                if (resident == null) return;
+            //timer.Tick += (_, _) =>
+            //{
+            //    var resident = Residents.FirstOrDefault(r => r.FirstName == "Ron");
+            //    if (resident == null) return;
 
-                resident.ResidentialState = resident.ResidentialState == Resident.EnmResidentialState.Out
-                    ? Resident.EnmResidentialState.In
-                    : Resident.EnmResidentialState.Out;
+            //    resident.ResidentialState = resident.ResidentialState == Resident.EnmResidentialState.Out
+            //        ? Resident.EnmResidentialState.In
+            //        : Resident.EnmResidentialState.Out;
 
-                resident.ImagePath = resident.ResidentialState == Resident.EnmResidentialState.Out
-                    ? "/Assets/ron.jpg"
-                    : "";
-            };
+            //    //resident.ImagePath = resident.ResidentialState == Resident.EnmResidentialState.Out
+            //    //    ? ""
+            //    //    : "/Assets/ron.jpg";
+            //};
 
-            timer.Start();
+            //timer.Start();
         }
     }
 }
