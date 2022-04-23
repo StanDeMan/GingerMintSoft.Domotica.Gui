@@ -61,7 +61,7 @@ namespace GingerMintSoft.Domotica.Gui.Models
         public string? ResidentialStateNotification => _residentialState.GetStringValue() 
             ?? EnmResidentialState.Unknown.GetStringValue();
 
-        public string? ResidentialStateNonPresenceNotification => _residentialState == EnmResidentialState.Out 
+        public string? ResidentialStateOutNotification => _residentialState == EnmResidentialState.Out 
             ? $"For {_residentialNonPresenceTime} h now"
             : string.Empty;
     }

@@ -1,7 +1,7 @@
 using System;
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-using GingerMintSoft.Domotica.Gui.ViewModels;
+using GingerMintSoft.Domotica.Gui.Main.ViewModels;
 
 namespace GingerMintSoft.Domotica.Gui.Routing
 {

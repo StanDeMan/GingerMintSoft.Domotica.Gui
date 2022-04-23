@@ -37,8 +37,11 @@
     <ProjectReference Include="..\Citrus.Avalonia\Citrus.Avalonia.csproj" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Update="UserInterface\Controls\MinMaxToggelButton.axaml.cs">
+    <Compile Update="UserInterface\Controls\Views\MinMaxToggelButton.axaml.cs">
       <DependentUpon>MinMaxToggelButton.axaml</DependentUpon>
     </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="UserInterface\InternalControls\ViewModels\" />
   </ItemGroup>
 </Project>

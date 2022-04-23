@@ -1,0 +1,38 @@
+<UserControl 
+	xmlns="https://github.com/avaloniaui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+	xmlns:icons="using:Material.Icons.Avalonia"
+    mc:Ignorable="d" 
+	d:DesignWidth="24" 
+	d:DesignHeight="24"
+    x:Class="GingerMintSoft.Domotica.Gui.UserInterface.Controls.Views.MinMaxToggelButton">
+	<Border
+		Width="24"
+		Height="24">
+		<ToggleButton 
+			Width="24"
+			Height="24"
+			IsChecked="True">
+			<ToggleButton.Template>
+				<ControlTemplate>
+					<Grid>
+						<icons:MaterialIcon
+							Width="20"
+							Height="20"
+							IsVisible="{Binding !IsChecked, RelativeSource={RelativeSource TemplatedParent}}"
+							Kind="ArrowCollapseAll"/>
+						<icons:MaterialIcon 
+							Width="20"
+							Height="20"	
+							IsVisible="{Binding IsChecked, RelativeSource={RelativeSource TemplatedParent}}"
+							Kind="ArrowExpandAll"/>
+					</Grid>
+				</ControlTemplate>	
+			</ToggleButton.Template>
+		</ToggleButton>
+	</Border>	
+</UserControl>
+
+
