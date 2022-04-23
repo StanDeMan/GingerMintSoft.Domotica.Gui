@@ -17,7 +17,8 @@
 			x:Name="ListBoxPersons"
 			Margin="4,4,4,4"
 			VerticalAlignment="Stretch"
-			HorizontalAlignment="Stretch" 			 
+			HorizontalAlignment="Stretch" 
+			Items="{Binding Persons}"
 			ScrollViewer.HorizontalScrollBarVisibility="Auto"
 			ScrollViewer.VerticalScrollBarVisibility="Hidden">
 			<ListBox.ItemsPanel>
