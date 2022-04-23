@@ -4,6 +4,7 @@ using System;
 using System.Reactive;
 using GingerMintSoft.Domotica.Gui.Main.Views;
 using GingerMintSoft.Domotica.Gui.Style;
+using System.Reflection;
 
 namespace GingerMintSoft.Domotica.Gui.Main.ViewModels
 {
@@ -52,14 +53,7 @@ namespace GingerMintSoft.Domotica.Gui.Main.ViewModels
                 _ => throw new ArgumentException(nameof(styles.CurrentTheme))
             }));
 
-            Locator.CurrentMutable.Register(() => new DashBoard(), typeof(IViewFor<DashBoardViewModel>));
-            Locator.CurrentMutable.Register(() => new AirCondition(), typeof(IViewFor<AirConditionViewModel>));
-            Locator.CurrentMutable.Register(() => new Lighting(), typeof(IViewFor<LightingViewModel>));
-            Locator.CurrentMutable.Register(() => new Appliances(), typeof(IViewFor<AppliancesViewModel>));
-            Locator.CurrentMutable.Register(() => new Communication(), typeof(IViewFor<CommunicationViewModel>));
-            Locator.CurrentMutable.Register(() => new Security(), typeof(IViewFor<SecurityViewModel>));
-            Locator.CurrentMutable.Register(() => new CcTv(), typeof(IViewFor<CcTvViewModel>));
-            Locator.CurrentMutable.Register(() => new Settings(), typeof(IViewFor<SettingsViewModel>));
+            Locator.CurrentMutable.RegisterViewsForViewModels(Assembly.GetExecutingAssembly());
 
             NavigateToDashBoard = ReactiveCommand.CreateFromObservable(() =>
                 Router.Navigate.Execute(new DashBoardViewModel(this)));
