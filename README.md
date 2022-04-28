@@ -5,4 +5,4 @@ Based on this design by Dmitrij Paškevič:
 https://www.behance.net/gallery/9080423/HEIMA-Smart-Home-Automation-UI-Concept
 
 Actual work so far:
-https://github.com/StanDeMan/GingerMintSoft.Domotica.Gui/blob/master/Domotica.jpg
+![alt text](https://github.com/StanDeMan/GingerMintSoft.Domotica.Gui/blob/master/Domotica.jpg)
