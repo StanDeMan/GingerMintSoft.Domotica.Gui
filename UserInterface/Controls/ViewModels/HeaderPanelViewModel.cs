@@ -14,7 +14,7 @@ namespace GingerMintSoft.Domotica.Gui.UserInterface.Controls.ViewModels
                 Interval = TimeSpan.FromSeconds(1)
             };
 
-            timer.Tick += (sender, args) =>
+            timer.Tick += (_, _) =>
             {
                 var date = DateTime.Now;
 
